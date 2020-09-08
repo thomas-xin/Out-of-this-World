@@ -1,0 +1,1 @@
+execute unless block ~ ~ ~ air run function custom:target_break_blocks

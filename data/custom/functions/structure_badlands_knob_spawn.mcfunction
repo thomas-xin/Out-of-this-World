@@ -1,0 +1,6 @@
+execute at @s[tag=b2,tag=!s_done] run setblock ~ ~ ~ structure_block[mode=load]{metadata:"badlands_knob",mirror:"NONE",rotation:"NONE",posX:-15,mode:"LOAD",posY:-5,posZ:-15,integrity:1.0f,showair:0b,name:"custom:badlands_knob",sizeX:30,sizeY:13,sizeZ:30,showboundingbox:1b}
+execute at @s[tag=b2,tag=!s_done] run setblock ~ ~ ~ structure_block[mode=load]{metadata:"badlands_knob",mirror:"NONE",rotation:"CLOCKWISE_90",posX:-15,mode:"LOAD",posY:-5,posZ:-15,integrity:1.0f,showair:0b,name:"custom:badlands_knob",sizeX:30,sizeY:13,sizeZ:30,showboundingbox:1b}
+execute at @s[tag=b3,tag=!s_done] run setblock ~ ~ ~ structure_block[mode=load]{metadata:"badlands_knob",mirror:"NONE",rotation:"CLOCKWISE_180",posX:-15,mode:"LOAD",posY:-5,posZ:-15,integrity:1.0f,showair:0b,name:"custom:badlands_knob",sizeX:30,sizeY:13,sizeZ:30,showboundingbox:1b}
+execute at @s[tag=b4,tag=!s_done] run setblock ~ ~ ~ structure_block[mode=load]{metadata:"badlands_knob",mirror:"NONE",rotation:"COUNTERCLOCKWISE_90",posX:-15,mode:"LOAD",posY:-5,posZ:-15,integrity:1.0f,showair:0b,name:"custom:badlands_knob",sizeX:30,sizeY:13,sizeZ:30,showboundingbox:1b}
+execute at @s[tag=!s_done] run setblock ~ ~-1 ~ redstone_block
+tag @s add s_done

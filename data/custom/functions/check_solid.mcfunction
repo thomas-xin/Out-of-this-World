@@ -1,0 +1,1 @@
+execute unless block ~ ~ ~ air unless block ~ ~ ~ cave_air unless block ~ ~ ~ grass unless block ~ ~ ~ tall_grass unless block ~ ~ ~ snow unless block ~ ~ ~ #small_flowers unless block ~ ~ ~ #carpets run tag @s add thru

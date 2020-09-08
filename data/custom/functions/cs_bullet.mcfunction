@@ -1,0 +1,10 @@
+execute as @s[tag=snake_bullet] at @s run function custom:snake_bullet
+execute as @s[tag=polar_star_bullet] at @s run function custom:polar_star_bullet
+execute as @s[tag=fireball_bullet] at @s run function custom:fireball_bullet
+execute as @s[tag=machine_gun_bullet] at @s run function custom:machine_gun_bullet
+execute as @s[tag=missile_launcher_bullet] at @s run function custom:missile_launcher_bullet
+execute as @s[tag=bubbler_bullet] at @s run function custom:bubbler_bullet
+execute as @s[tag=blade_bullet] at @s run function custom:blade_bullet
+execute as @s[tag=super_missile_launcher_bullet] at @s run function custom:super_missile_launcher_bullet
+execute as @s[tag=nemesis_bullet] at @s run function custom:nemesis_bullet
+execute as @s[tag=spur_bullet] at @s run function custom:spur_bullet
