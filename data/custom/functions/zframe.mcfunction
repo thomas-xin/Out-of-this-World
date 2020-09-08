@@ -27,7 +27,7 @@ function custom:exploding_arrow
 
 execute unless entity @e[tag=global_delay,limit=1] run function custom:generatestructures
 execute as @e[tag=turret] at @s unless entity @e[type=magma_cube,distance=..5,nbt={Size:4}] run function custom:nether_turret_explode
-execute at @e[tag=flame] run function custom:blaze
+execute as @e[tag=flame] at @s run function custom:blaze
 
 function custom:tornado_start
 execute as @e[tag=global_delay] at @s unless entity @p run kill @s
