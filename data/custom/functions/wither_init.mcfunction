@@ -31,3 +31,5 @@ tag @e[tag=assigned] remove assigned
 
 playsound minecraft:block.end_portal.spawn master @a ~ ~ ~ 2. 0.8 1.
 playsound minecraft:block.end_portal.spawn master @a ~ ~ ~ 2. 0.7 1.
+playsound minecraft:ambient.basalt_deltas.mood hostile @a ~ ~ ~ 2. 0.9 1.
+playsound minecraft:block.ender_chest.open hostile @a ~ ~ ~ 2. 0.5 1.
