@@ -19,4 +19,8 @@ scoreboard objectives add var1 dummy
 scoreboard objectives add var2 dummy
 scoreboard objectives add var3 dummy
 
+scoreboard players set __1__ var0 1
+scoreboard players set __512__ var0 512
+scoreboard players set __1024__ var0 1024
+
 difficulty hard

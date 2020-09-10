@@ -100,6 +100,6 @@ execute as @e[tag=cs_rando,sort=random,limit=1] run function custom:rando_positi
 
 execute as @e[type=end_crystal] at @s positioned ~ ~-1 ~ if block ^ ^ ^ dispenser run function custom:craft
 
-execute unless entity @e[tag=slow_loop,limit=1] if entity @e[tag=angle,limit=1,scores={var0=768..}] run kill @e[type=item]
+execute unless entity @e[tag=slow_loop,limit=1] if score __entities__ var0 >= __1024__ var0 run kill @e[type=item]
 execute unless entity @e[tag=slow_loop,limit=1] run summon area_effect_cloud 0 0 0 {Duration:128,Tags:["slow_loop"]}
 execute unless entity @e[tag=fast_loop,limit=1] run summon area_effect_cloud 0 0 0 {Duration:8,Tags:["fast_loop"]}
