@@ -1,5 +1,6 @@
 summon armor_stand 0 0 0 {Invulnerable:1,Marker:1,NoGravity:1,Tags:["angle"]}
 
+scoreboard objectives add count dummy
 scoreboard objectives add e_strength dummy
 scoreboard objectives add e_check dummy
 scoreboard objectives add deaths deathCount
