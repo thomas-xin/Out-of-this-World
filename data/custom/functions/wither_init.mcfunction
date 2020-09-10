@@ -29,7 +29,7 @@ execute store result score @e[tag=orbit,tag=!assigned] wither_id run scoreboard 
 execute store result score @e[tag=point_crystal,tag=!assigned] wither_id run scoreboard players get @e[tag=wither_load,sort=nearest,distance=..1,limit=1] wither_id
 tag @e[tag=assigned] remove assigned
 
-playsound minecraft:block.end_portal.spawn master @a ~ ~ ~ 2. 0.8 1.
-playsound minecraft:block.end_portal.spawn master @a ~ ~ ~ 2. 0.7 1.
-playsound minecraft:ambient.basalt_deltas.mood hostile @a ~ ~ ~ 2. 0.9 1.
-playsound minecraft:block.ender_chest.open hostile @a ~ ~ ~ 2. 0.5 1.
+playsound minecraft:block.end_portal.spawn master @a ~ ~ ~ 9. 0.8 1.
+playsound minecraft:block.end_portal.spawn master @a ~ ~ ~ 9. 0.7 1.
+playsound minecraft:ambient.basalt_deltas.mood hostile @a ~ ~ ~ 6. 0.9 1.
+playsound minecraft:block.ender_chest.open hostile @a ~ ~ ~ 12. 0.5 1.

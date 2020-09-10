@@ -51,6 +51,8 @@ execute at @e[tag=tri_nuke] run summon area_effect_cloud ~ ~ ~ {Duration:2,Tags:
 execute at @e[tag=channeling] as @e[tag=channeling2,sort=nearest,limit=1] run tp @s ^ ^ ^ ~ ~
 execute as @e[tag=channeling,nbt={inGround:1b}] run kill @s
 
+execute as @e[tag=break_box] at @s run function custom:break_box
+
 execute as @e[tag=cluster] run function custom:cluster_update
 execute as @e[tag=blast2] at @s run function custom:blast
 
@@ -96,3 +98,5 @@ execute in the_end positioned 0 0 0 unless entity @e[tag=rand_end,distance=..2,l
 execute as @e[tag=cs_rando,sort=random,limit=1] run function custom:rando_position
 
 execute as @e[type=end_crystal] at @s positioned ~ ~-1 ~ if block ^ ^ ^ dispenser run function custom:craft
+
+execute unless entity @e[tag=slow_loop,limit=1] run summon area_effect_cloud 0 0 0 {Duration:8,Tags:["slow_loop"]}

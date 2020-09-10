@@ -61,8 +61,7 @@ execute as @e[tag=wither_dead] at @s run function custom:wither_dead
 kill @e[tag=bats]
 execute at @e[tag=supercharged] unless entity @e[type=wither,distance=..2,limit=1] run summon area_effect_cloud ^ ^0.25 ^-0.25 {Tags:["blast","bats"],Duration:2}
 execute at @e[tag=supercharged] unless entity @e[type=wither,distance=..2,limit=1] run particle nautilus ~ ~ ~ 0.1 0 0.1 0.005 3 force
-execute at @e[tag=wither_main] run fill ~-1 ~ ~-2 ~1 ~4 ~2 cave_air
-execute at @e[tag=wither_main] run fill ~-2 ~ ~-1 ~2 ~4 ~1 cave_air
+execute unless entity @e[tag=slow_loop,limit=1] at @e[tag=wither_main] run summon area_effect_cloud ~ ~2 ~ {Duration:4,Tags:["break_box"]}
 execute as @e[tag=wither_sprite] run data merge entity @s {Invul:2500}
 execute unless entity @e[tag=global_delay,limit=1] run tag @e[tag=found] remove found
 execute unless entity @e[tag=global_delay,limit=1] as @e[tag=wither_main] at @e[tag=target_select,sort=random,limit=12] positioned ~-128 ~-8 ~-128 run execute as @e[type=!item,type=!player,type=!trident,type=!wither_skull,type=!wither,type=!experience_orb,type=!area_effect_cloud,type=!end_crystal,type=!bat,type=!armor_stand,type=!wither_skeleton,type=!arrow,type=!dragon_fireball,type=!fireball,type=!falling_block,tag=!found,tag=!launch,tag=!target,dx=256,dy=256,dz=256] run tag @s add found
