@@ -1,0 +1,1 @@
+execute unless block ~ ~ ~ #wither_immune unless block ~ ~ ~ netherite_block run function custom:destroy_with_entity_cap
