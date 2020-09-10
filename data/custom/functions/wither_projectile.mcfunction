@@ -31,9 +31,9 @@ execute at @s run function custom:projectile_trail
 kill @e[tag=showcrystal,distance=..8,limit=2]
 execute at @s run tp @s 0 0 0 ~ ~-5
 execute at @s run tp @s ^ ^ ^127
-execute at @s run execute store result entity @e[tag=projectile,limit=1] Motion[0] double 0.04 run data get entity @s Pos[0]
-execute at @s run execute store result entity @e[tag=projectile,limit=1] Motion[1] double 0.04 run data get entity @s Pos[1]
-execute at @s run execute store result entity @e[tag=projectile,limit=1] Motion[2] double 0.04 run data get entity @s Pos[2]
+execute at @s run execute store result entity @e[tag=projectile,limit=1] Motion[0] double 0.05 run data get entity @s Pos[0]
+execute at @s run execute store result entity @e[tag=projectile,limit=1] Motion[1] double 0.05 run data get entity @s Pos[1]
+execute at @s run execute store result entity @e[tag=projectile,limit=1] Motion[2] double 0.05 run data get entity @s Pos[2]
 kill @s
 tag @e[tag=victim] remove victim
 execute at @e[tag=projectile] run playsound minecraft:entity.ender_dragon.shoot hostile @a ~ ~ ~ 7 0.6667

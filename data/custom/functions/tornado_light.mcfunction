@@ -33,4 +33,4 @@ fill ~-1.5 ~-3 ~-1.5 ~1.5 ~4.5 ~1.5 command_block{Command:"summon falling_block 
 fill ~-1.5 ~-3 ~-1.5 ~1.5 ~9 ~1.5 command_block{Command:"summon falling_block ~ ~1.5 ~ {BlockState:{Name:obsidian},Time:1,Motion:[0.,2.2,0.]}",auto:1b} replace magma_block
 fill ~-1.5 ~-2 ~-1.5 ~1.5 ~9 ~1.5 command_block{Command:"summon falling_block ~ ~1.5 ~ {BlockState:{Name:glowstone},Time:1,Motion:[0.,0.4,0.]}",auto:1b} replace glowstone
 #command_block{Command:"summon falling_block ~ ~1.5 ~ {BlockState:{Name:fire},Time:1,Motion:[0.,1.8,0.]}",auto:1b}
-execute if entity @e[type=falling_block,distance=..32,limit=1] run summon area_effect_cloud ~ ~ ~ {Duration:1,Tags:["block_launcher"]}
+summon area_effect_cloud ~ ~ ~ {Duration:1,Tags:["block_launcher"]}

@@ -36,4 +36,4 @@ fill ~-0.45 ~-1.95 ~-0.45 ~0.45 ~3 ~0.45 command_block{Command:"summon falling_b
 fill ~-0.45 ~-1.95 ~-0.45 ~0.45 ~3 ~0.45 command_block{Command:"summon falling_block ~ ~1 ~ {BlockState:{Name:dirt},Time:1,Motion:[0.,0.4,0.]}",auto:1b} replace mycelium
 fill ~-0.45 ~-1.95 ~-0.45 ~0.45 ~3 ~0.45 command_block{Command:"summon falling_block ~ ~1 ~ {BlockState:{Name:dirt},Time:1,Motion:[0.,0.4,0.]}",auto:1b} replace farmland
 fill ~-0.45 ~-1.95 ~-0.45 ~0.45 ~3 ~0.45 command_block{Command:"summon falling_block ~ ~1 ~ {BlockState:{Name:dirt},Time:1,Motion:[0.,0.4,0.]}",auto:1b} replace coarse_dirt
-execute if entity @e[type=falling_block,distance=..32,limit=1] run summon area_effect_cloud ~ ~ ~ {Duration:1,Tags:["block_launcher"]}
+summon area_effect_cloud ~ ~ ~ {Duration:1,Tags:["block_launcher"]}
