@@ -38,7 +38,7 @@ execute as @e[tag=wither_target] at @s run function custom:wither_sprite
 
 execute as @e[tag=wither_main] at @s positioned ~ ~8.1 ~ run function custom:wither_attack
 
-execute at @e[tag=attack] run summon area_effect_cloud ~ ~-8.1 ~ {Duration:200,Tags:["summontimer"]}
+execute at @e[tag=attack] run summon area_effect_cloud ~ ~-8.1 ~ {Duration:400,Tags:["summontimer"]}
 execute at @e[tag=attack] run playsound minecraft:entity.evoker.prepare_summon neutral @a ~ ~ ~ 4. 0.6
 execute as @e[tag=timercheck] at @s unless entity @e[tag=point_crystal,distance=..6,limit=1] run function custom:explode_self
 execute as @e[tag=glow_crystal] at @s run function custom:glow_crystal

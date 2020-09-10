@@ -12,6 +12,9 @@ execute if entity @e[tag=victim2,limit=1] run tag @e[tag=victim1] remove victim1
 tag @e[tag=victim1] add victim
 tag @e[tag=victim2] add victim
 tag @e[tag=victim3] add victim
+tag @e[tag=victim1] remove victim1
+tag @e[tag=victim2] remove victim2
+tag @e[tag=victim3] remove victim3
 execute as @e[tag=s1,limit=1] at @s run summon area_effect_cloud ~ ~ ~ {Duration:150,Tags:["summontimer"]}
 execute as @e[tag=s2,limit=1] at @s run summon area_effect_cloud ~ ~ ~ {Duration:100,Tags:["summontimer"]}
 execute as @e[tag=s1,limit=1] at @s run summon fireball ~ ~ ~ {Glowing:1b,ExplosionPower:9,Motion:[0.,0.,0.],power:[0.,-.07,0.],Tags:["projectile","fire_trail","despawn"]}
@@ -27,15 +30,12 @@ execute at @s run function custom:projectile_trail
 execute at @s run function custom:projectile_trail
 kill @e[tag=showcrystal,distance=..8,limit=2]
 execute at @s run tp @s 0 0 0 ~ ~-5
-execute at @s run tp @s ^ ^ ^191
-execute at @s run execute store result entity @e[tag=projectile,limit=1] Motion[0] double 0.09 run data get entity @s Pos[0]
-execute at @s run execute store result entity @e[tag=projectile,limit=1] Motion[1] double 0.09 run data get entity @s Pos[1]
-execute at @s run execute store result entity @e[tag=projectile,limit=1] Motion[2] double 0.09 run data get entity @s Pos[2]
+execute at @s run tp @s ^ ^ ^127
+execute at @s run execute store result entity @e[tag=projectile,limit=1] Motion[0] double 0.04 run data get entity @s Pos[0]
+execute at @s run execute store result entity @e[tag=projectile,limit=1] Motion[1] double 0.04 run data get entity @s Pos[1]
+execute at @s run execute store result entity @e[tag=projectile,limit=1] Motion[2] double 0.04 run data get entity @s Pos[2]
 kill @s
 tag @e[tag=victim] remove victim
-tag @e[tag=victim1] remove victim1
-tag @e[tag=victim2] remove victim2
-tag @e[tag=victim3] remove victim3
 execute at @e[tag=projectile] run playsound minecraft:entity.ender_dragon.shoot hostile @a ~ ~ ~ 7 0.6667
 execute at @e[tag=projectile] run playsound minecraft:item.trident.riptide_3 neutral @a ~ ~ ~ 7 0.5
 tag @e[tag=projectile] remove projectile
