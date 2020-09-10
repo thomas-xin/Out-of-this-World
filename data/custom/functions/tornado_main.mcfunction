@@ -19,7 +19,7 @@ execute at @e[tag=rotate] positioned ~ ~-3 ~ as @e[type=falling_block,tag=scatte
 execute at @e[tag=rotate] run function custom:tornado_heavy
 execute at @e[tag=rotate] run fill ~-6. ~-6. ~-6. ~6. ~16 ~6. dirt replace grass_path
 execute at @e[tag=rotate] run fill ~-4.5 ~-5 ~-4.5 ~4.5 ~14 ~4.5 grass_path replace grass_block
-execute as @e[tag=timed] at @s unless entity @e[tag=timed,type=area_effect_cloud,distance=..8,limit=1] run kill @s
+execute as @e[type=armor_stand,tag=timed] at @s unless entity @e[tag=timed,type=area_effect_cloud,distance=..8,limit=1] run kill @s
 execute as @e[tag=timed] at @s run function custom:tornado_light
 kill @e[tag=flyto]
 execute at @e[tag=column] run summon armor_stand ^ ^1 ^1 {Tags:["flyto"],Invulnerable:1b,Invisible:1b}

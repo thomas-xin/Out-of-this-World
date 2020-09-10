@@ -10,7 +10,8 @@ execute at @s[tag=summon] run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,I
 tag @e[tag=summon] remove summon
 execute unless entity @e[tag=tornado,limit=1] as @e[tag=falling] unless entity @s[nbt={OnGround:0b}] run tag @e remove falling
 
-execute as @e[type=falling_block,tag=!thrown] at @s unless entity @e[tag=tornado,distance=..64,limit=1] run tag @s add nothrown
+execute at @e[tag=block_launcher] as @e[type=falling_block,tag=!thrown,tag=!nothrown,distance=..64] run tag @s add thrown
+tag @e[type=falling_block,tag=!thrown,tag=!nothrown] add nothrown
 execute as @e[type=falling_block] at @s run function custom:falling_block_entity
 
 execute if entity @e[tag=tornado,limit=1] run function custom:tornado_main

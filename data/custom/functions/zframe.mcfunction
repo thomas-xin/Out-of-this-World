@@ -1,3 +1,5 @@
+execute positioned 0 0 0 unless entity @e[tag=angle,distance=..1] run function custom:world_init
+
 execute in overworld run forceload remove all
 execute in the_nether run forceload remove all
 execute in the_end run forceload remove all
