@@ -1,4 +1,5 @@
 execute positioned 0 0 0 unless entity @e[tag=angle,distance=..1] run function custom:world_init
+execute as @e[tag=angle,limit=1] run function custom:count_entities
 
 execute in overworld run forceload remove all
 execute in the_nether run forceload remove all
@@ -99,4 +100,6 @@ execute as @e[tag=cs_rando,sort=random,limit=1] run function custom:rando_positi
 
 execute as @e[type=end_crystal] at @s positioned ~ ~-1 ~ if block ^ ^ ^ dispenser run function custom:craft
 
-execute unless entity @e[tag=slow_loop,limit=1] run summon area_effect_cloud 0 0 0 {Duration:8,Tags:["slow_loop"]}
+execute unless entity @e[tag=slow_loop,limit=1] if entity @e[tag=angle,limit=1,scores={var0=768..}] run kill @e[type=item]
+execute unless entity @e[tag=slow_loop,limit=1] run summon area_effect_cloud 0 0 0 {Duration:128,Tags:["slow_loop"]}
+execute unless entity @e[tag=fast_loop,limit=1] run summon area_effect_cloud 0 0 0 {Duration:8,Tags:["fast_loop"]}

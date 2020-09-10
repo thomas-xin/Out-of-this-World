@@ -11,6 +11,7 @@ tag @e[type=elder_guardian] add priority
 tag @e[tag=table] add priority
 tag @e[type=item_frame] add priority
 tag @e[type=shulker] add priority
+tag @e[type=piglin_brute] add priority
 tag @e[type=blaze] add priority
 tag @e[type=vindicator] add priority
 tag @e[type=pillager] add priority
@@ -19,4 +20,3 @@ tag @e[type=illusioner] add priority
 tag @e[type=ender_dragon] add priority
 tag @e[type=turtle,nbt={NoAI:1b}] add priority
 tag @a[gamemode=!creative,gamemode=!spectator] add priority
-difficulty hard

@@ -18,3 +18,5 @@ scoreboard objectives add var0 dummy
 scoreboard objectives add var1 dummy
 scoreboard objectives add var2 dummy
 scoreboard objectives add var3 dummy
+
+difficulty hard
