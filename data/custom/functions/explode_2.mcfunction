@@ -1,4 +1,7 @@
-fill ~-2 ~-2 ~-2 ~2 ~2 ~2 glass replace obsidian
+function custom:break_frame_1
+function custom:break_frame_2
+function custom:break_frame_3
+fill ~-2 ~-2 ~-2 ~2 ~2 ~2 glass keep
 fill ~-6 ~-6 ~-6 ~6 ~6 ~6 air replace water
 fill ~-6 ~-6 ~-6 ~6 ~6 ~6 air replace lava
 kill @e[tag=basic,distance=..10]

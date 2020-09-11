@@ -21,7 +21,9 @@ execute at @s[tag=f_proj] positioned ~3 ~-3 ~3 run function custom:tiny_explode
 execute at @s run function custom:tiny_explode
 execute at @s positioned ~ ~-2 ~ run effect give @e[distance=..32] wither 24 4
 execute at @s[tag=d_proj] run summon area_effect_cloud ~ ~-1 ~ {Duration:30,Tags:["projectile_freeze"]}
-execute at @s run setblock ~ ~ ~ packed_ice
+execute at @s run function custom:break_frame_1
+execute at @s run function custom:break_frame_2
+execute at @s run setblock ~ ~ ~ packed_ice keep
 execute at @s[tag=f_proj] run summon lightning_bolt ~ ~-3 ~
 execute at @s[tag=f_proj] run summon armor_stand ~ ~ ~ {Invisible:1,Invulnerable:1,Tags:["shockwave_1"]}
 execute at @s[tag=f_proj] positioned ~ ~-2 ~ run summon area_effect_cloud ~ ~ ~ {Duration:2,Tags:["launch_blocks"]}

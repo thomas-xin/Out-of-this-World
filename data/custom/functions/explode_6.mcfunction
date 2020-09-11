@@ -1,3 +1,6 @@
+function custom:break_frame_1
+function custom:break_frame_2
+function custom:break_frame_3
 fill ~-4 ~-4 ~-4 ~4 ~4 ~4 glass replace obsidian
 fill ~-3 ~-3 ~-3 ~3 ~3 ~3 glass keep
 fill ~-8 ~-8 ~-8 ~8 ~8 ~8 air replace water
