@@ -8,7 +8,7 @@ execute at @e[tag=s2] run particle end_rod ~ ~1.5 ~ 0 0 0 .2 11 force
 execute at @e[tag=fireball] run playsound minecraft:entity.blaze.shoot hostile @a ~ ~ ~ 1.2 0.
 execute as @e[tag=wither_main] at @s positioned ~ ~8.1 ~ run function custom:projectile_stabilize
 execute as @e[tag=timercheck] at @s unless entity @e[tag=fireball,distance=..7,limit=1] run function custom:wither_projectile
-execute at @e[tag=timercheck] as @e[tag=wither_main,sort=nearest,limit=1] at @s run function custom:wither_charge
+execute at @e[tag=timercheck] as @e[tag=wither_main,sort=nearest,limit=1] at @s positioned ~ 0 ~ if entity @s[distance=..99] at @s run function custom:wither_charge
 
 execute as @e[tag=despawn] at @s if entity @s[y=-64,dy=64] run kill @s
 execute as @e[tag=wither_main] at @s run function custom:wither_update
