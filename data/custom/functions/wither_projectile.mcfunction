@@ -17,8 +17,8 @@ tag @e[tag=victim2] remove victim2
 tag @e[tag=victim3] remove victim3
 execute as @e[tag=s1,limit=1] at @s run summon area_effect_cloud ~ ~ ~ {Duration:150,Tags:["summontimer"]}
 execute as @e[tag=s2,limit=1] at @s run summon area_effect_cloud ~ ~ ~ {Duration:100,Tags:["summontimer"]}
-execute as @e[tag=s1,limit=1] at @s run summon fireball ~ ~ ~ {Glowing:1b,ExplosionPower:9,Motion:[0.,0.,0.],power:[0.,-.07,0.],Tags:["projectile","fire_trail","despawn"]}
-execute as @e[tag=s2,limit=1] at @s run summon dragon_fireball ~ ~ ~ {Glowing:1b,Motion:[0.,0.,0.],power:[0.,-.07,0.],Tags:["projectile","fire_trail","despawn"]}
+execute as @e[tag=s1,limit=1] at @s run summon fireball ~ ~ ~ {Glowing:1b,ExplosionPower:9,Motion:[0.,0.,0.],power:[0.,-.02,0.],Tags:["projectile","fire_trail","despawn"]}
+execute as @e[tag=s2,limit=1] at @s run summon dragon_fireball ~ ~ ~ {Glowing:1b,Motion:[0.,0.,0.],power:[0.,-.02,0.],Tags:["projectile","fire_trail","despawn"]}
 execute at @s run tp @e[tag=projectile,distance=..4] ^ ^ ^12 ~ ~-8
 execute at @s as @e[tag=victim,sort=nearest,limit=1] if entity @s[distance=24..] run tp @e[tag=projectile,distance=..4] ^ ^ ^ ~ ~-10
 execute at @s as @e[tag=victim,sort=nearest,limit=1] if entity @s[distance=48..] run tp @e[tag=projectile,distance=..4] ^ ^ ^ ~ ~-12

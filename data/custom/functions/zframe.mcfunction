@@ -33,8 +33,6 @@ execute as @e[tag=turret] at @s unless entity @e[type=magma_cube,distance=..5,nb
 execute as @e[tag=flame] at @s run function custom:blaze
 
 function custom:tornado_start
-execute as @e[tag=global_delay] at @s unless entity @p run kill @s
-execute at @r unless entity @e[tag=global_delay,limit=1] run summon area_effect_cloud ~ 0 ~ {Duration:20,Tags:["global_delay"]}
 
 execute as @e[tag=dragon_check] at @s unless entity @e[type=ender_dragon,limit=1] run setblock 0 66 0 dragon_egg
 execute as @e[tag=dragon_check] at @s unless entity @e[type=ender_dragon,limit=1] run kill @s
@@ -101,5 +99,9 @@ execute as @e[tag=cs_rando,sort=random,limit=1] run function custom:rando_positi
 execute as @e[type=end_crystal] at @s positioned ~ ~-1 ~ if block ^ ^ ^ dispenser run function custom:craft
 
 execute unless entity @e[tag=slow_loop,limit=1] if score __entities__ var0 >= __1024__ var0 run kill @e[type=item]
+
+execute as @e[tag=global_delay] at @s unless entity @p run kill @s
+execute at @r unless entity @e[tag=global_delay,limit=1] run summon area_effect_cloud ~ 0 ~ {Duration:20,Tags:["global_delay"]}
+
 execute unless entity @e[tag=slow_loop,limit=1] run summon area_effect_cloud 0 0 0 {Duration:128,Tags:["slow_loop"]}
 execute unless entity @e[tag=fast_loop,limit=1] run summon area_effect_cloud 0 0 0 {Duration:8,Tags:["fast_loop"]}
