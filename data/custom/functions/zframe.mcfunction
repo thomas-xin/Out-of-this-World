@@ -1,12 +1,12 @@
 execute positioned 0 0 0 unless entity @e[tag=angle,distance=..1] run function custom:world_init
 execute as @e[tag=angle,limit=1] run function custom:count_entities
 
-execute in overworld run forceload remove all
-execute in the_nether run forceload remove all
-execute in the_end run forceload remove all
-execute in overworld run forceload add -100 -100 100 100
-execute in the_nether run forceload add -100 -100 100 100
-execute in the_end run forceload add -100 -100 100 100
+execute unless entity @e[tag=fast_loop,limit=1] in overworld run forceload remove all
+execute unless entity @e[tag=fast_loop,limit=1] in the_nether run forceload remove all
+execute unless entity @e[tag=fast_loop,limit=1] in the_end run forceload remove all
+execute unless entity @e[tag=fast_loop,limit=1] in overworld run forceload add -100 -100 100 100
+execute unless entity @e[tag=fast_loop,limit=1] in the_nether run forceload add -100 -100 100 100
+execute unless entity @e[tag=fast_loop,limit=1] in the_end run forceload add -100 -100 100 100
 
 execute at @a[scores={deaths=1..}] as @e[tag=wither_main,sort=random,limit=1] run data merge entity @s {ActiveEffects:[{Id:7,Amplifier:2,Duration:1}]}
 scoreboard players reset @a[scores={deaths=1..}] deaths

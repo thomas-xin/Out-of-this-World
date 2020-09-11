@@ -1,7 +1,8 @@
 tag @a[gamemode=!creative,gamemode=!spectator] add found
-execute as @e[tag=target] at @s run tp @s ^ ^0.07 ^0.7 facing entity @e[tag=found,sort=nearest,limit=1] eyes
-execute as @e[tag=target] at @s run tp @s ~ ~ ~ facing entity @e[tag=priority,distance=..303,sort=random,limit=1] eyes
-execute as @e[tag=target] at @s run tp @s ~ ~ ~ facing entity @a[gamemode=!creative,gamemode=!spectator,distance=..255,sort=nearest,limit=1] eyes
+execute unless entity @e[tag=fast_loop,limit=1] as @e[tag=target] at @s run tp @s ~ ~ ~ facing entity @e[tag=found,sort=nearest,limit=1] eyes
+execute unless entity @e[tag=fast_loop,limit=1] as @e[tag=target] at @s run tp @s ~ ~ ~ facing entity @e[tag=priority,distance=..303,sort=random,limit=1] eyes
+execute unless entity @e[tag=fast_loop,limit=1] as @e[tag=target] at @s run tp @s ~ ~ ~ facing entity @a[gamemode=!creative,gamemode=!spectator,distance=..255,sort=nearest,limit=1] eyes
+execute as @e[tag=target] at @s run tp @s ^ ^0.07 ^0.7
 execute at @e[tag=fireball] run particle explosion ~ ~1.5 ~ 0 0 0 0 0 force
 execute at @e[tag=s1] run particle flame ~ ~1.5 ~ 0 0 0 .2 11 force
 execute at @e[tag=s2] run particle end_rod ~ ~1.5 ~ 0 0 0 .2 11 force
@@ -36,7 +37,7 @@ execute as @e[tag=blast] at @s run function custom:blast
 
 execute as @e[tag=wither_target] at @s run function custom:wither_sprite
 
-execute as @e[tag=wither_main] at @s positioned ~ ~8.1 ~ run function custom:wither_attack
+execute unless entity @e[tag=fast_loop,limit=1] as @e[tag=wither_main] at @s positioned ~ ~8.1 ~ run function custom:wither_attack
 
 execute at @e[tag=attack] run summon area_effect_cloud ~ ~-8.1 ~ {Duration:400,Tags:["summontimer"]}
 execute at @e[tag=attack] run playsound minecraft:entity.evoker.prepare_summon neutral @a ~ ~ ~ 4. 0.6
