@@ -13,6 +13,7 @@ tag @e[type=item_frame] add priority
 tag @e[type=shulker] add priority
 tag @e[type=piglin_brute] add priority
 tag @e[type=blaze] add priority
+tag @e[type=ghast] add priority
 tag @e[type=vindicator] add priority
 tag @e[type=pillager] add priority
 tag @e[type=evoker] add priority

@@ -17,6 +17,7 @@ execute at @e[tag=emeraldgen] run setblock ~ ~ ~ structure_block[mode=load]{meta
 execute at @e[tag=emeraldgen] run setblock ~ ~-1 ~ redstone_block destroy
 execute at @e[tag=emeraldgen] run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace structure_block
 execute at @e[tag=emeraldgen] run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace redstone_block
+execute at @e[tag=emeraldgen] run summon zombie_villager ~ ~-2 ~ {PersistenceRequired:1b,CanPickUpLoot:1b,AbsorptionAmount:5f,Health:35f,CanBreakDoors:1b,HandItems:[{id:"minecraft:diamond_axe",Count:1b},{}],HandDropChances:[0.085F,0.085F],Attributes:[{Name:generic.max_health,Base:35},{Name:generic.follow_range,Base:100},{Name:generic.knockback_resistance,Base:0.7},{Name:generic.movement_speed,Base:0.25},{Name:generic.armor,Base:5},{Name:generic.armor_toughness,Base:5}],VillagerData:{level:5,profession:"minecraft:none",type:"minecraft:jungle"}}
 kill @e[tag=emeraldgen]
 execute at @a as @e[type=bat,distance=64..,sort=random,limit=1] at @s if entity @s[y=16,dy=40] if block ~ ~4 ~ stone unless entity @e[tag=s_cave_crystal,distance=..129] run summon armor_stand ~ ~ ~ {Marker:1,Invisible:1,Invulnerable:1,Tags:["s_cave_crystal"]}
 execute at @e[tag=s_cave_crystal,tag=!s_done] run summon armor_stand ~ ~ ~ {NoGravity:1,Tags:["s_cave_crystal_generator"]}
