@@ -97,6 +97,7 @@ execute in the_end positioned 0 0 0 unless entity @e[tag=rand_end,distance=..2,l
 execute as @e[tag=cs_rando,sort=random,limit=1] run function custom:rando_position
 
 execute as @e[type=end_crystal] at @s positioned ~ ~-1 ~ if block ^ ^ ^ dispenser run function custom:craft
+execute if entity @e[tag=tracked,limit=1] as @e[type=item,nbt={Item:{tag:{HideFlags:40}}}] at @s at @p run function custom:compass_check
 
 execute unless entity @e[tag=slow_loop,limit=1] if score __entities__ var0 >= __1024__ var0 run kill @e[type=item]
 
