@@ -34,7 +34,7 @@ execute as @e[tag=flame] at @s run function custom:blaze
 
 function custom:tornado_start
 
-execute as @e[tag=dragon_check] at @s unless entity @e[type=ender_dragon,limit=1] run setblock 0 66 0 dragon_egg
+execute as @e[tag=dragon_check] at @s unless entity @e[type=ender_dragon,limit=1] run setblock 0 68 0 dragon_egg
 execute as @e[tag=dragon_check] at @s unless entity @e[type=ender_dragon,limit=1] run kill @s
 execute in the_end positioned 0 0 0 as @e[type=ender_dragon] run summon area_effect_cloud ~ ~ ~ {Duration:2,Tags:["dragon_check"]}
 

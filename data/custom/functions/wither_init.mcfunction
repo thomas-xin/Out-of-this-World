@@ -1,6 +1,6 @@
 fill ~-1 ~ ~ ~1 ~-1 ~ air
 fill ~ ~ ~-1 ~ ~-1 ~1 air
-fill ~ ~ ~ ~ ~-3 ~ air
+fill ~ ~ ~ ~ ~-2 ~ air
 kill @e[tag=initialized,distance=..2]
 
 summon wither ~ ~ ~ {Invul:280,Tags:["initialized","summoned","wither_target","wither_orbit","wither_load"]}
