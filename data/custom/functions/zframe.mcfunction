@@ -99,7 +99,8 @@ execute as @e[tag=cs_rando,sort=random,limit=1] run function custom:rando_positi
 execute as @e[type=end_crystal] at @s positioned ~ ~-1 ~ if block ^ ^ ^ dispenser run function custom:craft
 execute if entity @e[tag=tracked,limit=1] as @e[type=item,nbt={Item:{tag:{HideFlags:40}}}] at @s at @p run function custom:compass_check
 
-execute unless entity @e[tag=slow_loop,limit=1] if score __entities__ var0 >= __1024__ var0 run kill @e[type=item]
+execute unless entity @e[tag=fast_loop,limit=1] if score __entities__ var0 >= __2048__ var0 run kill @e[type=item]
+execute unless entity @e[tag=fast_loop,limit=1] if score __entities__ var0 >= __1024__ var0 run kill @e[type=item,sort=random,limit=64]
 
 execute as @e[tag=global_delay] at @s unless entity @p run kill @s
 execute at @r unless entity @e[tag=global_delay,limit=1] run summon area_effect_cloud ~ 0 ~ {Duration:20,Tags:["global_delay"]}
