@@ -2,9 +2,9 @@ execute at @e[tag=s_done,tag=!fin] run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace str
 execute at @e[tag=s_done,tag=!fin] run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace redstone_block
 tag @e[tag=s_done,tag=!fin] add fin
 
-execute at @a as @e[type=creeper,distance=64..,sort=random,limit=1] at @s if entity @s[y=48,dy=144] unless entity @e[tag=s_badlands_knob,distance=..129] run function custom:structure_badlands_knob_summon
+# execute at @a as @e[type=creeper,distance=64..,sort=random,limit=1] at @s if entity @s[y=48,dy=144] unless entity @e[tag=s_badlands_knob,distance=..129] run function custom:structure_badlands_knob_summon
 
-execute at @a as @e[type=spider,distance=64..,sort=random,limit=1] at @s if entity @s[y=48,dy=144] unless entity @e[tag=s_badlands_spike,distance=..257] run function custom:structure_badlands_knob_summon
+# execute at @a as @e[type=spider,distance=64..,sort=random,limit=1] at @s if entity @s[y=48,dy=144] unless entity @e[tag=s_badlands_spike,distance=..257] run function custom:structure_badlands_knob_summon
 
 execute as @e[tag=crystal] at @s run function custom:crystalset
 execute as @e[tag=randocolour] at @s run function custom:crystalores
