@@ -1,12 +1,12 @@
 summon area_effect_cloud 0 0 0 {Tags:["blow_centre"],Duration:32}
 execute as @e[tag=blow_centre,sort=random,limit=16] at @s run tp @s ~ ~ ~ ~7 0
 execute as @e[tag=blow_centre,sort=random,limit=16] at @s run tp @s ~ ~ ~ ~-23 0
-execute at @e[tag=blow_centre] run summon area_effect_cloud 0 0 0 {Tags:["blow"],Duration:1}
+execute as @e[tag=blow_centre] run summon area_effect_cloud 0 0 0 {Tags:["blow"],Duration:1}
 execute as @e[tag=blow] at @e[tag=blow_centre,sort=random,limit=1] run tp @s ^ ^ ^64
-execute as @s[tag=summon] at @p run tp @s ^ ^-2 ^16 ~ 0
-execute at @s[tag=summon] run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Invisible:1b,Tags:["t1","timed"],Passengers:[{id:area_effect_cloud,Tags:["timed"],Particle:"large_smoke",Radius:1.6f,Duration:614,Effects:[{Id:9b,Amplifier:0b,Duration:20},{Id:25b,Amplifier:9b,Duration:10}]}]}
-execute at @s[tag=summon] run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Invisible:1b,Tags:["t2","timed"],Passengers:[{id:area_effect_cloud,Tags:["timed"],Particle:"squid_ink",Radius:1.6f,Duration:614,Effects:[{Id:9b,Amplifier:0b,Duration:20},{Id:25b,Amplifier:9b,Duration:10}]}]}
-execute at @s[tag=summon] run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Invisible:1b,Tags:["t3","timed"],Passengers:[{id:area_effect_cloud,Tags:["timed"],Particle:"poof",Radius:1.6f,Duration:614,Effects:[{Id:9b,Amplifier:0b,Duration:20},{Id:25b,Amplifier:9b,Duration:10}]}]}
+execute as @e[tag=summon] at @p run tp @s ^ ^-2 ^16 ~ 0
+execute at @e[tag=summon] run summon armor_stand ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Invisible:1b,Tags:["t1","timed"],Passengers:[{id:area_effect_cloud,Tags:["timed"],Particle:"large_smoke",Radius:1.6f,Duration:614,Effects:[{Id:9b,Amplifier:0b,Duration:20},{Id:25b,Amplifier:9b,Duration:10}]}]}
+execute at @e[tag=summon] run summon armor_stand ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Invisible:1b,Tags:["t2","timed"],Passengers:[{id:area_effect_cloud,Tags:["timed"],Particle:"squid_ink",Radius:1.6f,Duration:614,Effects:[{Id:9b,Amplifier:0b,Duration:20},{Id:25b,Amplifier:9b,Duration:10}]}]}
+execute at @e[tag=summon] run summon armor_stand ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Invisible:1b,Tags:["t3","timed"],Passengers:[{id:area_effect_cloud,Tags:["timed"],Particle:"poof",Radius:1.6f,Duration:614,Effects:[{Id:9b,Amplifier:0b,Duration:20},{Id:25b,Amplifier:9b,Duration:10}]}]}
 tag @e[tag=summon] remove summon
 execute unless entity @e[tag=tornado,limit=1] as @e[tag=falling] unless entity @s[nbt={OnGround:0b}] run tag @e remove falling
 

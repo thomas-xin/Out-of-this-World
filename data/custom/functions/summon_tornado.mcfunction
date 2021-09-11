@@ -1,0 +1,1 @@
+summon armor_stand ~ ~ ~ {Invisible:1b,Tags:["summon","tornado"],Passengers:[{id:area_effect_cloud,Duration:1200,Tags:["timed","rotate"]}]}
