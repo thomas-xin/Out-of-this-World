@@ -8,7 +8,7 @@ gamerule commandBlockOutput false
 summon area_effect_cloud 0 0 0 {Tags:["blow_centre"],Duration:32}
 tp @e[tag=blow_centre,sort=random,limit=16] ~ ~ ~ ~7 0
 tp @e[tag=blow_centre,sort=random,limit=16] ~ ~ ~ ~-23 0
-execute as @e at @s run function custom:entity_scan_1
+execute as @e[type=!item] at @s run function custom:entity_scan_1
 
 execute if entity @e[tag=tornado,limit=1] as @e at @s run function custom:tornado_main
 execute unless entity @e[tag=tornado,limit=1] as @e[tag=falling] unless entity @s[nbt={OnGround:0b}] run tag @s remove falling
@@ -20,7 +20,7 @@ execute if entity @e[tag=wither_load] run function custom:wither_loop
 execute as @a at @s run function custom:player_entity
 
 execute as @e[tag=wind,sort=random,limit=1] at @s run function custom:windrandomizer
-execute as @e at @s run function custom:entity_scan_2
+execute as @e[type=!item] at @s run function custom:entity_scan_2
 
 execute unless entity @e[tag=global_delay,limit=1] at @e[tag=tornado] run tag @e[tag=none,distance=..4,limit=1,sort=random] add scatter
 execute unless entity @e[tag=global_delay,limit=1] run tag @e[tag=scatter] remove none

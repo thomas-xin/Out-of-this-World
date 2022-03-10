@@ -162,7 +162,7 @@ kill @e[tag=random]
 execute at @e[tag=loot] run function custom:lootgen
 
 tag @e[tag=s_bridge] add transparent
-tag @e[tag=transparent,sort=random,limit=13] remove transparent
+execute at @e[tag=bridge,tag=guardian,sort=random,limit=6] run tag @e[tag=transparent,distance=..28] remove transparent
 
 tag @e[tag=bridge,tag=!gateway] add hub
 tag @e[tag=bridge] add branch
@@ -226,19 +226,47 @@ execute at @e[tag=s_clear] run setblock ~1 ~ ~1 obsidian
 kill @e[tag=s_clear]
 execute at @e[tag=s_bridge] run kill @e[type=item,distance=..8]
 kill @e[tag=s_bridge]
+execute at @e[tag=lootbox] run summon area_effect_cloud ~ ~ ~ {Tags:["random","r0"],Duration:1}
+execute at @e[tag=lootbox] run summon area_effect_cloud ~ ~ ~ {Tags:["random","r0"],Duration:1}
+execute at @e[tag=lootbox] run summon area_effect_cloud ~ ~ ~ {Tags:["random","r0"],Duration:1}
 execute at @e[tag=lootbox] run summon area_effect_cloud ~ ~ ~ {Tags:["random","r1"],Duration:1}
 execute at @e[tag=lootbox] run summon area_effect_cloud ~ ~ ~ {Tags:["random","r2"],Duration:1}
 execute at @e[tag=lootbox] run summon area_effect_cloud ~ ~ ~ {Tags:["random","r3"],Duration:1}
 execute at @e[tag=lootbox] run summon area_effect_cloud ~ ~ ~ {Tags:["random","r4"],Duration:1}
 execute at @e[tag=lootbox] run summon area_effect_cloud ~ ~ ~ {Tags:["random","r5"],Duration:1}
 execute at @e[tag=lootbox] run summon area_effect_cloud ~ ~ ~ {Tags:["random","r6"],Duration:1}
+execute at @e[tag=lootbox] run summon area_effect_cloud ~ ~ ~ {Tags:["random","r7"],Duration:1}
+execute at @e[tag=lootbox] run summon area_effect_cloud ~ ~ ~ {Tags:["random","r8"],Duration:1}
+execute at @e[tag=lootbox] run summon area_effect_cloud ~ ~ ~ {Tags:["random","r9"],Duration:1}
 execute at @e[tag=lootbox] run tag @e[tag=random,distance=..2,sort=random,limit=1] add selected
+
+execute at @e[tag=selected,tag=r0] run setblock ~ ~-1 ~ structure_block[mode=load]{metadata:"sculk_rod",mirror:"NONE",rotation:"NONE",posX:0,mode:"LOAD",posY:0,posZ:0,integrity:1.0f,showair:0b,name:"custom:sculk_rod",sizeX:1,sizeY:2,sizeZ:1,showboundingbox:1b}
+execute at @e[tag=selected,tag=r0] run setblock ~ ~ ~ redstone_block
+
 execute at @e[tag=selected,tag=r1] run setblock ~ ~ ~ barrel[facing=up]{LootTable:"chests/desert_pyramid"}
 execute at @e[tag=selected,tag=r2] run setblock ~ ~ ~ barrel[facing=up]{LootTable:"chests/simple_dungeon"}
 execute at @e[tag=selected,tag=r3] run setblock ~ ~ ~ barrel[facing=up]{LootTable:"chests/woodland_mansion"}
 execute at @e[tag=selected,tag=r4] run setblock ~ ~ ~ barrel[facing=up]{LootTable:"chests/jungle_temple"}
-execute at @e[tag=selected,tag=r5] run setblock ~ ~ ~ barrel[facing=up]{LootTable:"chests/igloo_chest"}
-execute at @e[tag=selected,tag=r6] run setblock ~ ~4 ~ red_shulker_box[facing=down]{LootTable:"chests/shipwreck_treasure"}
+execute at @e[tag=selected,tag=r5] run setblock ~ ~ ~ barrel[facing=up]{LootTable:"chests/stronghold_crossing"}
+execute at @e[tag=selected,tag=r6] run setblock ~ ~ ~ barrel[facing=up]{LootTable:"chests/igloo_chest"}
+execute at @e[tag=selected,tag=r7] run setblock ~ ~ ~ barrel[facing=up]{LootTable:"chests/ruined_portal"}
+execute at @e[tag=selected,tag=r8] run setblock ~ ~4 ~ red_shulker_box[facing=down]{LootTable:"chests/shipwreck_treasure"}
+
+execute at @e[tag=selected,tag=r9] run summon area_effect_cloud ~ ~ ~ {Tags:["selected","random","r10"],Duration:1}
+execute at @e[tag=selected,tag=r9] run kill @e[tag=selected,distance=...1,sort=random,limit=1]
+
+execute at @e[tag=selected,tag=r9] run setblock ~ ~-2 ~ structure_block[mode=load]{metadata:"nether_labyrinth_basement",mirror:"NONE",rotation:"NONE",posX:-4,mode:"LOAD",posY:-7,posZ:-4,integrity:1.0f,showair:0b,name:"custom:nether_labyrinth_basement",sizeX:9,sizeY:8,sizeZ:9,showboundingbox:1b}
+execute at @e[tag=selected,tag=r9] run setblock ~ ~-3 ~ redstone_block
+execute at @e[tag=selected,tag=r9] run setblock ~ ~-1 ~ turtle_egg
+execute at @e[tag=selected,tag=r9] run fill ~-1 ~ ~-1 ~1 ~ ~1 black_carpet
+execute at @e[tag=selected,tag=r9] run setblock ~ ~ ~ red_carpet
+
+execute at @e[tag=selected,tag=r10] run setblock ~ ~-2 ~ structure_block[mode=load]{metadata:"nether_labyrinth_basement2",mirror:"NONE",rotation:"NONE",posX:-4,mode:"LOAD",posY:-7,posZ:-4,integrity:1.0f,showair:0b,name:"custom:nether_labyrinth_basement2",sizeX:9,sizeY:8,sizeZ:9,showboundingbox:1b}
+execute at @e[tag=selected,tag=r10] run setblock ~ ~-3 ~ redstone_block
+execute at @e[tag=selected,tag=r10] run setblock ~ ~-1 ~ turtle_egg
+execute at @e[tag=selected,tag=r10] run fill ~-1 ~ ~-1 ~1 ~ ~1 black_carpet
+execute at @e[tag=selected,tag=r10] run setblock ~ ~ ~ red_carpet
+
 kill @e[tag=random]
 kill @e[tag=lootbox]
 kill @e[tag=bridgeset]
