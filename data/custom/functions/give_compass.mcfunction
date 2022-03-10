@@ -1,1 +1,1 @@
-replaceitem entity @s weapon.mainhand compass{display:{Name:'{"text":"Hunter Compass","color":"gold","bold":true,"italic":false}'},HideFlags:40,Enchantments:[{}]} 1
+item replace entity @s weapon.mainhand with compass{display:{Name:'{"text":"Hunter Compass","color":"gold","bold":true,"italic":false}'},HideFlags:40,Enchantments:[{}]} 1

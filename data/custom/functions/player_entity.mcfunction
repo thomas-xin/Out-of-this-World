@@ -1,3 +1,10 @@
+tag @s[tag=immune] remove flying
+tag @s[nbt={abilities:{flying:1b}}] add immune
+
+tag @s[tag=assigned] remove assigned
+execute if entity @s[scores={deaths=1..}] run data merge entity @e[tag=wither_main,sort=nearest,limit=1] {ActiveEffects:[{Id:7,Amplifier:2,Duration:1}]}
+scoreboard players reset @s[scores={deaths=1..}] deaths
+
 effect give @s[tag=trident] conduit_power 16 9
 effect give @s[tag=trident] dolphins_grace 16 8
 execute at @s[tag=trident,nbt={SelectedItem:{id:"minecraft:trident",Count:1b,tag:{HideFlags:53}}},scores={trident=1..}] run effect give @e[distance=.01..4] wither 18 2
@@ -15,4 +22,7 @@ tag @s[scores={player_id=1..}] add assigned
 scoreboard players set @s[tag=!assigned] player_id -1
 execute if entity @s[tag=!assigned] in overworld run summon area_effect_cloud 0 0 0 {Duration:1,Tags:["player_id"]}
 
-execute as @s run function custom:cs_weapon_before
+function custom:cs_weapon_before
+
+scoreboard players reset @s var0
+scoreboard players reset @s var1

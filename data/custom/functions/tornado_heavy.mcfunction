@@ -55,7 +55,7 @@ fill ~-2.7 ~-2 ~-2.7 ~2.7 ~9.5 ~2.7 command_block{Command:"summon falling_block 
 fill ~-3.5 ~-2 ~-3.5 ~3.5 ~4 ~3.5 command_block{Command:"summon falling_block ~ ~1.5 ~ {BlockState:{Name:hay_block},Time:1,Motion:[0.,2.1,0.]}",auto:1b} replace hay_block
 fill ~-2.05 ~-1.95 ~-2.05 ~2.05 ~5 ~2.05 command_block{Command:"summon falling_block ~ ~1 ~ {BlockState:{Name:dirt},Time:1,Motion:[0.,1.3,0.]}",auto:1b} replace grass_block
 fill ~-2.05 ~-1.95 ~-2.05 ~2.05 ~5 ~2.05 command_block{Command:"summon falling_block ~ ~1 ~ {BlockState:{Name:dirt},Time:1,Motion:[0.,1.5,0.]}",auto:1b} replace dirt
-fill ~-2.05 ~-1.95 ~-2.05 ~2.05 ~5 ~2.05 command_block{Command:"summon falling_block ~ ~1 ~ {BlockState:{Name:dirt},Time:1,Motion:[0.,1.4,0.]}",auto:1b} replace grass_path
+fill ~-2.05 ~-1.95 ~-2.05 ~2.05 ~5 ~2.05 command_block{Command:"summon falling_block ~ ~1 ~ {BlockState:{Name:dirt},Time:1,Motion:[0.,1.4,0.]}",auto:1b} replace dirt_path
 fill ~-2.05 ~-1.95 ~-2.05 ~2.05 ~5 ~2.05 command_block{Command:"summon falling_block ~ ~1 ~ {BlockState:{Name:dirt},Time:1,Motion:[0.,1.5,0.]}",auto:1b} replace podzol
 fill ~-2.05 ~-1.95 ~-2.05 ~2.05 ~5 ~2.05 command_block{Command:"summon falling_block ~ ~1 ~ {BlockState:{Name:dirt},Time:1,Motion:[0.,1.5,0.]}",auto:1b} replace mycelium
 fill ~-2.05 ~-1.95 ~-2.05 ~2.05 ~5 ~2.05 command_block{Command:"summon falling_block ~ ~1 ~ {BlockState:{Name:dirt},Time:1,Motion:[0.,1.6,0.]}",auto:1b} replace farmland

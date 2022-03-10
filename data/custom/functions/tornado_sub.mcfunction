@@ -50,7 +50,6 @@ execute positioned ~ ~24 ~ run tag @e[distance=..4,type=!falling_block,type=!arm
 execute positioned ~ ~24 ~ run effect give @e[distance=..4] levitation 1 38
 execute positioned ~ ~30 ~ run tag @e[distance=..4.5,type=!falling_block,type=!armor_stand,type=!area_effect_cloud] add flying
 execute positioned ~ ~30 ~ run effect give @e[distance=..4.5] levitation 1 38
-kill @e[tag=column]
 summon armor_stand ~ ~ ~ {Tags:["column"],Invulnerable:1b,Invisible:1b}
 summon armor_stand ~ ~10 ~ {Tags:["column","vertical"],Invulnerable:1b,Invisible:1b}
 summon armor_stand ~ ~20 ~ {Tags:["column","vertical"],Invulnerable:1b,Invisible:1b}

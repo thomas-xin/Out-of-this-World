@@ -6,4 +6,4 @@ execute as @e[tag=s_cave_crystal_generator] at @s if entity @e[type=chicken,dist
 execute as @e[tag=crystal,sort=random,limit=7] if entity @s[tag=c1] as @e[tag=angle] at @s run tp @s ~ ~ ~ ~23 ~
 execute as @e[tag=crystal,sort=random,limit=7] if entity @s[tag=c2] as @e[tag=angle] at @s run tp @s ~ ~ ~ ~-23 ~
 execute as @e[tag=crystal,sort=random,limit=9] if entity @s[tag=c3] as @e[tag=s_cave_crystal_generator] at @s if entity @s[y=8,dy=128] run tp @s ~ ~-1.4 ~
-execute as @e[tag=crystal,sort=random,limit=9] if entity @s[tag=c4] as @e[tag=s_cave_crystal_generator] at @s unless block ~ ~8 ~ water if entity @s[y=0,dy=48] run tp @s ~ ~1.7 ~
+execute as @e[tag=crystal,sort=random,limit=9] if entity @s[tag=c4] as @e[tag=s_cave_crystal_generator] at @s unless block ~ ~8 ~ water if entity @s[y=-32,dy=48] run tp @s ~ ~1.7 ~

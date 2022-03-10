@@ -1,4 +1,7 @@
-summon armor_stand 0 0 0 {Invulnerable:1,Marker:1,NoGravity:1,Tags:["angle"]}
+say Welcome to Out of this World!
+forceload add 0 0 0 0
+kill @e[tag=angle]
+summon armor_stand 0 -64 0 {Invulnerable:1,Marker:1,NoGravity:1,Tags:["angle"]}
 
 scoreboard objectives add count dummy
 scoreboard objectives add e_strength dummy
@@ -11,6 +14,7 @@ scoreboard objectives add left minecraft.custom:minecraft.leave_game
 
 scoreboard objectives add player_id dummy
 scoreboard objectives add wither_id dummy
+scoreboard objectives add smudge_id dummy
 scoreboard objectives add compare_id dummy
 scoreboard objectives add cs_delay dummy
 scoreboard objectives add spur_charge dummy
@@ -23,6 +27,8 @@ scoreboard objectives add var3 dummy
 scoreboard players set __1__ var0 1
 scoreboard players set __512__ var0 512
 scoreboard players set __1024__ var0 1024
+scoreboard players set __2048__ var0 2048
+scoreboard players set __16384__ var0 16384
 
 scoreboard objectives setdisplay sidebar count
 

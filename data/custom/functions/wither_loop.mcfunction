@@ -31,8 +31,10 @@ execute as @e[tag=summoned] at @s run function custom:wither_spawn_phase
 
 execute as @e[tag=projectile_freeze] at @s run function custom:projectile_freeze
 execute at @e[tag=ultrablast] run particle end_rod ~ ~ ~ .7 .7 .7 0.05 2 force
-execute at @e[tag=supercharged] if entity @e[tag=wither_main,distance=..64,limit=1] run kill @e[tag=blast,distance=..2.5,sort=nearest,limit=1]
-execute as @e[tag=supercharged] at @s unless entity @e[tag=wither_main,distance=..64,limit=1] run kill @s
+scoreboard players add @e[tag=supercharged] var0 1
+execute at @e[tag=supercharged,scores={var0=..191}] run kill @e[tag=blast,distance=..2.5,sort=nearest,limit=1]
+execute as @e[tag=supercharged,scores={var0=192..}] run kill @s
+
 execute as @e[tag=blast] at @s run function custom:blast
 
 execute as @e[tag=wither_target] at @s run function custom:wither_sprite
