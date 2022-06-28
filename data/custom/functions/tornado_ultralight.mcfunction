@@ -1,39 +1,58 @@
 fill ~-1.5 ~-3.5 ~-1.5 ~1.5 ~3 ~1.5 air replace water
-fill ~-4 ~-5 ~-4 ~4 ~3 ~4 air replace oak_leaves
-fill ~-4 ~-5 ~-4 ~4 ~3 ~4 air replace spruce_leaves
-fill ~-4 ~-5 ~-4 ~4 ~3 ~4 air replace birch_leaves
-fill ~-4 ~-5 ~-4 ~4 ~3 ~4 air replace jungle_leaves
-fill ~-4 ~-5 ~-4 ~4 ~3 ~4 air replace acacia_leaves
-fill ~-4 ~-5 ~-4 ~4 ~3 ~4 air replace dark_oak_leaves
-fill ~-3 ~-5 ~-4 ~4 ~3 ~4 air replace torch
-fill ~-.5 ~-4 ~-.5 ~.5 ~3 ~.5 stripped_oak_log replace oak_log
-fill ~-.5 ~-4 ~-.5 ~.5 ~3 ~.5 stripped_spruce_log replace spruce_log
-fill ~-.5 ~-4 ~-.5 ~.5 ~3 ~.5 stripped_birch_log replace birch_log
-fill ~-.5 ~-4 ~-.5 ~.5 ~3 ~.5 stripped_jungle_log replace jungle_log
-fill ~-.5 ~-4 ~-.5 ~.5 ~3 ~.5 stripped_acacia_log replace acacia_log
-fill ~-.5 ~-4 ~-.5 ~.5 ~3 ~5 stripped_dark_oak_log replace dark_oak_log
-fill ~-1.5 ~-3 ~-1.5 ~1.5 ~4 ~1.5 air replace fire
-fill ~-4.5 ~-4 ~-4.5 ~4.5 ~5 ~4.5 command_block{Command:"summon falling_block ~ ~1.5 ~ {BlockState:{Name:chorus_flower},Time:1,Motion:[0.,1.2,0.]}",auto:1b} replace chorus_flower
-fill ~-3.5 ~-3 ~-3.5 ~3.5 ~4 ~3.5 command_block{Command:"summon falling_block ~ ~1.5 ~ {BlockState:{Name:chorus_flower,Properties:{age:'5'}},Time:1,Motion:[0.,2.2,0.]}",auto:1b} replace chorus_flower
-fill ~-6 ~-4 ~-6 ~6 ~4 ~6 campfire[lit=false] replace campfire
-fill ~-2 ~-1.95 ~-2 ~2 ~3 ~2 command_block{Command:"summon falling_block ~ ~2.0 ~ {BlockState:{Name:sand},Time:1,Motion:[0.,0.8,0.]}",auto:1b} replace sand
-fill ~-2 ~-1.95 ~-2 ~2 ~3 ~2 command_block{Command:"summon falling_block ~ ~2.0 ~ {BlockState:{Name:red_sand},Time:1,Motion:[0.,0.8,0.]}",auto:1b} replace red_sand
-fill ~-1.5 ~-7.5 ~-1.5 ~1.5 ~2 ~1.5 air replace seagrass
-fill ~-1.5 ~-7.5 ~-1.5 ~1.5 ~2 ~1.5 air replace tall_seagrass
-fill ~-1.5 ~-7.5 ~-1.5 ~1.5 ~2 ~1.5 air replace kelp
-fill ~-1 ~-2 ~-1 ~1 ~4 ~1 command_block{Command:"summon falling_block ~ ~2.0 ~ {BlockState:{Name:gravel},Time:1,Motion:[0.,0.6,0.]}",auto:1b} replace gravel
-fill ~-1.5 ~-3 ~-1.5 ~1.5 ~3 ~1.5 command_block{Command:"summon falling_block ~ ~1.5 ~ {BlockState:{Name:netherrack},Time:1,Motion:[0.,1.0,0.]}",auto:1b} replace netherrack
-fill ~-1.5 ~-2 ~-1.5 ~1.5 ~3 ~1.5 command_block{Command:"summon falling_block ~ ~1.5 ~ {BlockState:{Name:soul_sand},Time:1,Motion:[0.,0.5,0.]}",auto:1b} replace soul_sand
-fill ~-1.5 ~-2 ~-1.5 ~1.5 ~3 ~1.5 command_block{Command:"summon falling_block ~ ~1.5 ~ {BlockState:{Name:snow_block},Time:1,Motion:[0.,0.6,0.]}",auto:1b} replace snow_block
-fill ~-1.5 ~-2 ~-1.5 ~1.5 ~3 ~1.5 air replace snow
-fill ~-1.5 ~-3 ~-1.5 ~1.5 ~3 ~1.5 command_block{Command:"summon falling_block ~ ~1.5 ~ {BlockState:{Name:magma_block},Time:1,Motion:[0.,0.9,0.]}",auto:1b} replace lava
-fill ~-1.5 ~-3 ~-1.5 ~1.5 ~4 ~1.5 command_block{Command:"summon falling_block ~ ~1.5 ~ {BlockState:{Name:obsidian},Time:1,Motion:[0.,0.7,0.]}",auto:1b} replace magma_block
-fill ~-1.5 ~-2 ~-1.5 ~1.5 ~6 ~1.5 command_block{Command:"summon falling_block ~ ~1.5 ~ {BlockState:{Name:glowstone},Time:1,Motion:[0.,0.2,0.]}",auto:1b} replace glowstone
-fill ~-0.45 ~-1.95 ~-0.45 ~0.45 ~3 ~0.45 command_block{Command:"summon falling_block ~ ~1 ~ {BlockState:{Name:dirt},Time:1,Motion:[0.,0.4,0.]}",auto:1b} replace grass_block
-fill ~-0.45 ~-1.95 ~-0.45 ~0.45 ~3 ~0.45 command_block{Command:"summon falling_block ~ ~1 ~ {BlockState:{Name:dirt},Time:1,Motion:[0.,0.4,0.]}",auto:1b} replace dirt
-fill ~-0.45 ~-1.95 ~-0.45 ~0.45 ~3 ~0.45 command_block{Command:"summon falling_block ~ ~1 ~ {BlockState:{Name:dirt},Time:1,Motion:[0.,0.4,0.]}",auto:1b} replace dirt_path
-fill ~-0.45 ~-1.95 ~-0.45 ~0.45 ~3 ~0.45 command_block{Command:"summon falling_block ~ ~1 ~ {BlockState:{Name:dirt},Time:1,Motion:[0.,0.4,0.]}",auto:1b} replace podzol
-fill ~-0.45 ~-1.95 ~-0.45 ~0.45 ~3 ~0.45 command_block{Command:"summon falling_block ~ ~1 ~ {BlockState:{Name:dirt},Time:1,Motion:[0.,0.4,0.]}",auto:1b} replace mycelium
-fill ~-0.45 ~-1.95 ~-0.45 ~0.45 ~3 ~0.45 command_block{Command:"summon falling_block ~ ~1 ~ {BlockState:{Name:dirt},Time:1,Motion:[0.,0.4,0.]}",auto:1b} replace farmland
-fill ~-0.45 ~-1.95 ~-0.45 ~0.45 ~3 ~0.45 command_block{Command:"summon falling_block ~ ~1 ~ {BlockState:{Name:dirt},Time:1,Motion:[0.,0.4,0.]}",auto:1b} replace coarse_dirt
-summon area_effect_cloud ~ ~ ~ {Duration:3,Tags:["block_launcher"]}
+fill ~-4 ~-4 ~-4 ~4 ~4 ~4 air replace #leaves
+fill ~-2.9814239699997196 ~-1.4907119849998598 ~-2.9814239699997196 ~2.9814239699997196 ~4.47213595499958 ~2.9814239699997196 command_block{Command:"function custom:thrown_slime_block",auto:1b} replace slime_block
+fill ~-2.9814239699997196 ~-1.4907119849998598 ~-2.9814239699997196 ~2.9814239699997196 ~4.47213595499958 ~2.9814239699997196 command_block{Command:"function custom:thrown_honey_block",auto:1b} replace honey_block
+fill ~-2.1081851067789192 ~-1.0540925533894596 ~-2.1081851067789192 ~2.1081851067789192 ~3.162277660168379 ~2.1081851067789192 command_block{Command:"function custom:thrown_powder_snow",auto:1b} replace #snow
+fill ~-1.4907119849998598 ~-0.7453559924999299 ~-1.4907119849998598 ~1.4907119849998598 ~2.23606797749979 ~1.4907119849998598 command_block{Command:"function custom:thrown_red_mushroom_block",auto:1b} replace red_mushroom_block
+fill ~-1.4907119849998598 ~-0.7453559924999299 ~-1.4907119849998598 ~1.4907119849998598 ~2.23606797749979 ~1.4907119849998598 command_block{Command:"function custom:thrown_brown_mushroom_block",auto:1b} replace brown_mushroom_block
+fill ~-1.4907119849998598 ~-0.7453559924999299 ~-1.4907119849998598 ~1.4907119849998598 ~2.23606797749979 ~1.4907119849998598 command_block{Command:"function custom:thrown_brown_mushroom_block",auto:1b} replace shroomlight
+fill ~-1.2171612389003692 ~-0.6085806194501846 ~-1.2171612389003692 ~1.2171612389003692 ~1.8257418583505538 ~1.2171612389003692 command_block{Command:"function custom:thrown_red_sand",auto:1b} replace #impermeable
+fill ~-1.2171612389003692 ~-0.6085806194501846 ~-1.2171612389003692 ~1.2171612389003692 ~1.8257418583505538 ~1.2171612389003692 command_block{Command:"function custom:thrown_sea_lantern",auto:1b} replace sea_lantern
+fill ~-1.2171612389003692 ~-0.6085806194501846 ~-1.2171612389003692 ~1.2171612389003692 ~1.8257418583505538 ~1.2171612389003692 command_block{Command:"function custom:thrown_redstone_lamp",auto:1b} replace redstone_lamp
+fill ~-1.2171612389003692 ~-0.6085806194501846 ~-1.2171612389003692 ~1.2171612389003692 ~1.8257418583505538 ~1.2171612389003692 command_block{Command:"function custom:thrown_glowstone",auto:1b} replace glowstone
+fill ~-1.2171612389003692 ~-0.6085806194501846 ~-1.2171612389003692 ~1.2171612389003692 ~1.8257418583505538 ~1.2171612389003692 command_block{Command:"function custom:thrown_honey_block",auto:1b} replace bee_nest
+fill ~-1.0540925533894596 ~-0.5270462766947298 ~-1.0540925533894596 ~1.0540925533894596 ~1.5811388300841895 ~1.0540925533894596 command_block{Command:"function custom:thrown_netherrack",auto:1b} replace netherrack
+fill ~-1.0540925533894596 ~-0.5270462766947298 ~-1.0540925533894596 ~1.0540925533894596 ~1.5811388300841895 ~1.0540925533894596 command_block{Command:"function custom:thrown_netherrack",auto:1b} replace #nylium
+fill ~-0.9428090415820632 ~-0.4714045207910316 ~-0.9428090415820632 ~0.9428090415820632 ~1.414213562373095 ~0.9428090415820632 command_block{Command:"function custom:thrown_target",auto:1b} replace target
+fill ~-0.9428090415820632 ~-0.4714045207910316 ~-0.9428090415820632 ~0.9428090415820632 ~1.414213562373095 ~0.9428090415820632 command_block{Command:"function custom:thrown_soul_sand",auto:1b} replace #soul_fire_base_blocks
+fill ~-0.9428090415820632 ~-0.4714045207910316 ~-0.9428090415820632 ~0.9428090415820632 ~1.414213562373095 ~0.9428090415820632 command_block{Command:"function custom:thrown_red_sand",auto:1b} replace #sand
+fill ~-0.9428090415820632 ~-0.4714045207910316 ~-0.9428090415820632 ~0.9428090415820632 ~1.414213562373095 ~0.9428090415820632 command_block{Command:"function custom:thrown_dirt",auto:1b} replace #dirt
+fill ~-0.9428090415820632 ~-0.4714045207910316 ~-0.9428090415820632 ~0.9428090415820632 ~1.414213562373095 ~0.9428090415820632 command_block{Command:"function custom:thrown_dirt",auto:1b} replace farmland
+fill ~-0.9428090415820632 ~-0.4714045207910316 ~-0.9428090415820632 ~0.9428090415820632 ~1.414213562373095 ~0.9428090415820632 command_block{Command:"function custom:thrown_dirt",auto:1b} replace dirt_path
+fill ~-0.9428090415820632 ~-0.4714045207910316 ~-0.9428090415820632 ~0.9428090415820632 ~1.414213562373095 ~0.9428090415820632 command_block{Command:"function custom:thrown_powder_snow",auto:1b} replace #ice
+fill ~-0.9428090415820632 ~-0.4714045207910316 ~-0.9428090415820632 ~0.9428090415820632 ~1.414213562373095 ~0.9428090415820632 command_block{Command:"function custom:thrown_netherrack",auto:1b} replace magma_block
+fill ~-0.9428090415820632 ~-0.4714045207910316 ~-0.9428090415820632 ~0.9428090415820632 ~1.414213562373095 ~0.9428090415820632 command_block{Command:"function custom:thrown_hay_block",auto:1b} replace hay_block
+fill ~-0.8606629658238704 ~-0.4303314829119352 ~-0.8606629658238704 ~0.8606629658238704 ~1.2909944487358056 ~0.8606629658238704 command_block{Command:"function custom:thrown_gravel",auto:1b} replace #mineable/shovel
+fill ~-0.8606629658238704 ~-0.4303314829119352 ~-0.8606629658238704 ~0.8606629658238704 ~1.2909944487358056 ~0.8606629658238704 command_block{Command:"function custom:thrown_sponge",auto:1b} replace wet_sponge
+fill ~-0.8606629658238704 ~-0.4303314829119352 ~-0.8606629658238704 ~0.8606629658238704 ~1.2909944487358056 ~0.8606629658238704 command_block{Command:"function custom:thrown_sponge",auto:1b} replace sponge
+fill ~-0.8606629658238704 ~-0.4303314829119352 ~-0.8606629658238704 ~0.8606629658238704 ~1.2909944487358056 ~0.8606629658238704 command_block{Command:"function custom:thrown_honeycomb_block",auto:1b} replace honeycomb_block
+fill ~-0.8606629658238704 ~-0.4303314829119352 ~-0.8606629658238704 ~0.8606629658238704 ~1.2909944487358056 ~0.8606629658238704 command_block{Command:"function custom:thrown_honeycomb_block",auto:1b} replace beehive
+fill ~-0.8606629658238704 ~-0.4303314829119352 ~-0.8606629658238704 ~0.8606629658238704 ~1.2909944487358056 ~0.8606629658238704 command_block{Command:"function custom:thrown_sculk_catalyst",auto:1b} replace sculk
+fill ~-0.7698003589195012 ~-0.3849001794597506 ~-0.7698003589195012 ~0.7698003589195012 ~1.1547005383792517 ~0.7698003589195012 command_block{Command:"function custom:thrown_calcite",auto:1b} replace calcite
+fill ~-0.7453559924999299 ~-0.37267799624996495 ~-0.7453559924999299 ~0.7453559924999299 ~1.118033988749895 ~0.7453559924999299 command_block{Command:"function custom:thrown_black_wool",auto:1b} replace #wool
+fill ~-0.7453559924999299 ~-0.37267799624996495 ~-0.7453559924999299 ~0.7453559924999299 ~1.118033988749895 ~0.7453559924999299 command_block{Command:"function custom:thrown_red_sandstone",auto:1b} replace sandstone
+fill ~-0.7453559924999299 ~-0.37267799624996495 ~-0.7453559924999299 ~0.7453559924999299 ~1.118033988749895 ~0.7453559924999299 command_block{Command:"function custom:thrown_red_sandstone",auto:1b} replace chiseled_sandstone
+fill ~-0.7453559924999299 ~-0.37267799624996495 ~-0.7453559924999299 ~0.7453559924999299 ~1.118033988749895 ~0.7453559924999299 command_block{Command:"function custom:thrown_red_sandstone",auto:1b} replace cut_sandstone
+fill ~-0.7453559924999299 ~-0.37267799624996495 ~-0.7453559924999299 ~0.7453559924999299 ~1.118033988749895 ~0.7453559924999299 command_block{Command:"function custom:thrown_red_sandstone",auto:1b} replace smooth_sandstone
+fill ~-0.7453559924999299 ~-0.37267799624996495 ~-0.7453559924999299 ~0.7453559924999299 ~1.118033988749895 ~0.7453559924999299 command_block{Command:"function custom:thrown_red_sandstone",auto:1b} replace red_sandstone
+fill ~-0.7453559924999299 ~-0.37267799624996495 ~-0.7453559924999299 ~0.7453559924999299 ~1.118033988749895 ~0.7453559924999299 command_block{Command:"function custom:thrown_red_sandstone",auto:1b} replace chiseled_red_sandstone
+fill ~-0.7453559924999299 ~-0.37267799624996495 ~-0.7453559924999299 ~0.7453559924999299 ~1.118033988749895 ~0.7453559924999299 command_block{Command:"function custom:thrown_red_sandstone",auto:1b} replace cut_red_sandstone
+fill ~-0.7453559924999299 ~-0.37267799624996495 ~-0.7453559924999299 ~0.7453559924999299 ~1.118033988749895 ~0.7453559924999299 command_block{Command:"function custom:thrown_red_sandstone",auto:1b} replace smooth_red_sandstone
+fill ~-0.7453559924999299 ~-0.37267799624996495 ~-0.7453559924999299 ~0.7453559924999299 ~1.118033988749895 ~0.7453559924999299 command_block{Command:"function custom:thrown_quartz_block",auto:1b} replace quartz_block
+fill ~-0.7453559924999299 ~-0.37267799624996495 ~-0.7453559924999299 ~0.7453559924999299 ~1.118033988749895 ~0.7453559924999299 command_block{Command:"function custom:thrown_quartz_block",auto:1b} replace chiseled_quartz_block
+fill ~-0.7453559924999299 ~-0.37267799624996495 ~-0.7453559924999299 ~0.7453559924999299 ~1.118033988749895 ~0.7453559924999299 command_block{Command:"function custom:thrown_quartz_block",auto:1b} replace quartz_pillar
+fill ~-0.7453559924999299 ~-0.37267799624996495 ~-0.7453559924999299 ~0.7453559924999299 ~1.118033988749895 ~0.7453559924999299 command_block{Command:"function custom:thrown_quartz_block",auto:1b} replace quartz_bricks
+fill ~-0.7453559924999299 ~-0.37267799624996495 ~-0.7453559924999299 ~0.7453559924999299 ~1.118033988749895 ~0.7453559924999299 command_block{Command:"function custom:thrown_quartz_block",auto:1b} replace smooth_quartz
+fill ~-0.6666666666666666 ~-0.3333333333333333 ~-0.6666666666666666 ~0.6666666666666666 ~1.0 ~0.6666666666666666 command_block{Command:"function custom:thrown_pumpkin",auto:1b} replace pumpkin
+fill ~-0.6666666666666666 ~-0.3333333333333333 ~-0.6666666666666666 ~0.6666666666666666 ~1.0 ~0.6666666666666666 command_block{Command:"function custom:thrown_carved_pumpkin",auto:1b} replace carved_pumpkin
+fill ~-0.6666666666666666 ~-0.3333333333333333 ~-0.6666666666666666 ~0.6666666666666666 ~1.0 ~0.6666666666666666 command_block{Command:"function custom:thrown_carved_pumpkin",auto:1b} replace jack_o_lantern
+fill ~-0.6666666666666666 ~-0.3333333333333333 ~-0.6666666666666666 ~0.6666666666666666 ~1.0 ~0.6666666666666666 command_block{Command:"function custom:thrown_nether_wart_block",auto:1b} replace nether_wart_block
+fill ~-0.6666666666666666 ~-0.3333333333333333 ~-0.6666666666666666 ~0.6666666666666666 ~1.0 ~0.6666666666666666 command_block{Command:"function custom:thrown_warped_wart_block",auto:1b} replace warped_wart_block
+fill ~-0.6666666666666666 ~-0.3333333333333333 ~-0.6666666666666666 ~0.6666666666666666 ~1.0 ~0.6666666666666666 command_block{Command:"function custom:thrown_dripstone_block",auto:1b} replace dripstone_block
+fill ~-0.5443310539518175 ~-0.27216552697590873 ~-0.5443310539518175 ~0.5443310539518175 ~0.8164965809277263 ~0.5443310539518175 command_block{Command:"function custom:thrown_budding_amethyst",auto:1b} replace budding_amethyst
+fill ~-0.5443310539518175 ~-0.27216552697590873 ~-0.5443310539518175 ~0.5443310539518175 ~0.8164965809277263 ~0.5443310539518175 command_block{Command:"function custom:thrown_budding_amethyst",auto:1b} replace amethyst_block
+fill ~-0.4714045207910316 ~-0.2357022603955158 ~-0.4714045207910316 ~0.4714045207910316 ~0.7071067811865475 ~0.4714045207910316 command_block{Command:"function custom:thrown_stripped_oak_wood",auto:1b} replace #logs_that_burn
+fill ~-0.4714045207910316 ~-0.2357022603955158 ~-0.4714045207910316 ~0.4714045207910316 ~0.7071067811865475 ~0.4714045207910316 command_block{Command:"function custom:thrown_stripped_crimson_hyphae",auto:1b} replace #crimson_stems
+fill ~-0.4714045207910316 ~-0.2357022603955158 ~-0.4714045207910316 ~0.4714045207910316 ~0.7071067811865475 ~0.4714045207910316 command_block{Command:"function custom:thrown_stripped_warped_hyphae",auto:1b} replace #warped_stems
+fill ~-0.4714045207910316 ~-0.2357022603955158 ~-0.4714045207910316 ~0.4714045207910316 ~0.7071067811865475 ~0.4714045207910316 command_block{Command:"function custom:thrown_calcite",auto:1b} replace bone_block
+fill ~-0.4216370213557839 ~-0.21081851067789195 ~-0.4216370213557839 ~0.4216370213557839 ~0.6324555320336759 ~0.4216370213557839 command_block{Command:"function custom:thrown_dried_kelp_block",auto:1b} replace dried_kelp_block

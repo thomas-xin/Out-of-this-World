@@ -8,6 +8,7 @@ execute store result score @e[tag=wither_orbit,tag=!assigned] wither_id run scor
 tag @e[tag=assigned] remove assigned
 
 summon fireball ~ ~ ~ {direction:[0.,-.5,0.],power:[0.,-.1,0.],ExplosionPower:16}
+summon tnt ~ ~ ~ {Fuse:2}
 fill ~-3 ~-1 ~-3 ~3 ~5 ~3 void_air
 summon lightning_bolt ~ ~-2 ~
 

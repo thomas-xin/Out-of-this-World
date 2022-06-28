@@ -1,5 +1,4 @@
 say Welcome to Out of this World!
-forceload add 0 0 0 0
 kill @e[tag=angle]
 summon armor_stand 0 -64 0 {Invulnerable:1,Marker:1,NoGravity:1,Tags:["angle"]}
 
@@ -33,3 +32,5 @@ scoreboard players set __16384__ var0 16384
 scoreboard objectives setdisplay sidebar count
 
 difficulty hard
+
+gamerule commandBlockOutput false

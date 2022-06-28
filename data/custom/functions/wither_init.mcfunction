@@ -1,7 +1,6 @@
 fill ~-1 ~ ~ ~1 ~-1 ~ air
 fill ~ ~ ~-1 ~ ~-1 ~1 air
 fill ~ ~ ~ ~ ~-2 ~ air
-kill @e[tag=initialized,distance=..2]
 
 summon wither ~ ~ ~ {Invul:280,Tags:["initialized","summoned","wither_target","wither_orbit","wither_load"]}
 
@@ -33,3 +32,5 @@ playsound minecraft:block.end_portal.spawn master @a ~ ~ ~ 9. 0.8 1.
 playsound minecraft:block.end_portal.spawn master @a ~ ~ ~ 9. 0.7 1.
 playsound minecraft:ambient.basalt_deltas.mood hostile @a ~ ~ ~ 6. 0.9 1.
 playsound minecraft:block.ender_chest.open hostile @a ~ ~ ~ 12. 0.5 1.
+
+kill @s

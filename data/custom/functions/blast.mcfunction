@@ -9,6 +9,8 @@ execute as @s[tag=!secondary,tag=!channeled] run summon fireball ~ ~-.6 ~ {Glowi
 execute as @s[tag=channeled] run summon fireball ~ ~.4 ~ {ExplosionPower:3,direction:[0.,-.8,0.],power:[0.,-.5,0.],Tags:["despawn","moved"]}
 execute as @s[tag=secondary] run summon creeper ~ ~-.6 ~ {ExplosionRadius:3,Invulnerable:1b,Fuse:0,Tags:["moved"]}
 
+execute as @s[tag=!secondary] run summon arrow ~ ~-1 ~ {damage:20d,Color:1,Tags:["sculk_spread"]}
+
 summon area_effect_cloud ~ ~ ~ {Duration:1,Tags:["randomX","r1"]}
 summon area_effect_cloud ~ ~ ~ {Duration:1,Tags:["randomX","r2"]}
 summon area_effect_cloud ~ ~ ~ {Duration:1,Tags:["randomX","r3"]}
@@ -24,7 +26,6 @@ execute at @s[tag=secondary] as @e[tag=cluster,distance=..1] run tag @s add nocl
 execute at @s[tag=channeled] as @e[tag=cluster,distance=..1] run tag @s add nocluster
 execute at @s unless block ~ ~1 ~ air unless block ~ ~1 ~ cave_air as @e[type=trident,distance=..1] at @s run tp @s ~ ~-2 ~
 execute at @s unless block ~ ~1 ~ air unless block ~ ~1 ~ cave_air as @e[tag=moved,distance=..1] at @s run tp @s ~ ~.6 ~
-summon arrow ~ ~0.1 ~ {damage:20d,Color:1,Motion:[0.,0.5,0.],Tags:["despawn","cluster"]}
 
 particle sweep_attack ~ ~ ~ 0 0 0 1 0 force
 particle sweep_attack ~ ~1 ~ 0.5 0 0.5 1 3 force

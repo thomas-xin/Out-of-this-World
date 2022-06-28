@@ -1,13 +1,24 @@
-execute positioned 0 -64 0 unless entity @e[tag=angle,distance=...1] run function custom:world_init
+scoreboard players add __global_delay__ var0 1
+execute if score __global_delay__ var0 matches 32.. run scoreboard players set __global_delay__ var0 0
+scoreboard players add __slow_loop__ var0 1
+execute if score __slow_loop__ var0 matches 128.. run scoreboard players set __slow_loop__ var0 0
+scoreboard players add __fast_loop__ var0 1
+execute if score __fast_loop__ var0 matches 8.. run scoreboard players set __fast_loop__ var0 0
 
-execute as @e[tag=angle,limit=1] run function custom:count_entities
-execute if score __entities__ var0 >= __16384__ var0 run kill @e[type=!player]
+execute if score __fast_loop__ var0 matches 4 run function custom:entity_scan_s
 
-gamerule commandBlockOutput false
+summon area_effect_cloud 0 0 0 {Tags:["blow_centre"],Duration:33}
+execute positioned 0 0 0 run tp @e[distance=..1,tag=blow_centre,sort=random,limit=16] ~ ~ ~ ~7 0
+execute positioned 0 0 0 run tp @e[distance=..1,tag=blow_centre,sort=random,limit=16] ~ ~ ~ ~-23 0
 
-summon area_effect_cloud 0 0 0 {Tags:["blow_centre"],Duration:32}
-tp @e[tag=blow_centre,sort=random,limit=16] ~ ~ ~ ~7 0
-tp @e[tag=blow_centre,sort=random,limit=16] ~ ~ ~ ~-23 0
+summon area_effect_cloud 0 0 0 {Tags:["blow"],Duration:33}
+execute positioned 0 0 0 at @e[distance=..1,tag=blow_centre,sort=random,limit=3] as @e[distance=..1,tag=blow,sort=random,limit=1] run tp @s ^ ^ ^16 ~ ~
+
+execute as @e[tag=fire_trail] at @s run function custom:projectile_trail2
+execute as @e[tag=fireball_check] at @s run function custom:projectile_explode
+execute at @e[type=fireball,tag=fire_trail] positioned ^ ^ ^6 run summon area_effect_cloud ~ ~ ~ {Duration:3,Tags:["f_proj","fireball_check"]}
+execute at @e[type=dragon_fireball,tag=fire_trail] positioned ^ ^ ^6 run summon area_effect_cloud ~ ~ ~ {Duration:3,Tags:["d_proj","fireball_check"]}
+
 execute as @e[type=!item] at @s run function custom:entity_scan_1
 
 execute if entity @e[tag=tornado,limit=1] as @e at @s run function custom:tornado_main
@@ -22,26 +33,20 @@ execute as @a at @s run function custom:player_entity
 execute as @e[tag=wind,sort=random,limit=1] at @s run function custom:windrandomizer
 execute as @e[type=!item] at @s run function custom:entity_scan_2
 
-execute unless entity @e[tag=global_delay,limit=1] at @e[tag=tornado] run tag @e[tag=none,distance=..4,limit=1,sort=random] add scatter
-execute unless entity @e[tag=global_delay,limit=1] run tag @e[tag=scatter] remove none
+execute if score __global_delay__ var0 matches 0 at @e[tag=tornado] run tag @e[tag=none,distance=..4,limit=1,sort=random] add scatter
+execute if score __global_delay__ var0 matches 0 run tag @e[tag=scatter] remove none
 
 execute as @a at @s run function custom:cs_weapon_after
 
-execute in overworld positioned 0 0 0 unless entity @e[tag=rand_end,distance=...1,limit=1] run function custom:rando_set
-execute in the_nether positioned 0 0 0 unless entity @e[tag=rand_end,distance=...1,limit=1] run function custom:rando_set
-execute in the_end positioned 0 0 0 unless entity @e[tag=rand_end,distance=...1,limit=1] run function custom:rando_set
+execute positioned 0 0 0 unless entity @e[tag=cs_rando,distance=...1,limit=1] run function custom:rando_set
 
 execute as @e[tag=cs_rando,sort=random,limit=1] run function custom:rando_position
 
 # execute as @e[type=end_crystal] at @s positioned ~ ~-1 ~ if block ^ ^ ^ dispenser run function custom:craft
 execute if entity @e[tag=tracked,limit=1] as @e[type=item,nbt={Item:{tag:{HideFlags:40}}}] at @s at @p run function custom:compass_check
 
-execute unless entity @e[tag=fast_loop,limit=1] if score __entities__ var0 >= __2048__ var0 run kill @e[type=item]
-execute unless entity @e[tag=fast_loop,limit=1] if score __entities__ var0 >= __1024__ var0 run kill @e[type=item,sort=random,limit=64]
+execute if score __slow_loop__ var0 matches 0 if score __entities__ var0 matches 1536.. run kill @e[type=item]
+execute if score __global_delay__ var0 matches 0 if score __entities__ var0 matches 1024.. run kill @e[type=item,sort=random,limit=128]
+execute if score __fast_loop__ var0 matches 0 if score __entities__ var0 matches 768.. run kill @e[type=item,sort=random,limit=32]
 
-execute at @r unless entity @e[tag=global_delay,limit=1] run summon area_effect_cloud ~ 0 ~ {Duration:20,Tags:["global_delay"]}
-
-execute positioned 0 0 0 if entity @e[tag=slow_loop,distance=...1,limit=1,nbt={Age:1}] run function custom:generatestructures
-
-execute unless entity @e[tag=slow_loop,limit=1] run summon area_effect_cloud 0 0 0 {Duration:128,Tags:["slow_loop"]}
-execute unless entity @e[tag=fast_loop,limit=1] run summon area_effect_cloud 0 0 0 {Duration:8,Tags:["fast_loop"]}
+execute if score __slow_loop__ var0 matches 64 positioned 0 0 0 run function custom:generatestructures

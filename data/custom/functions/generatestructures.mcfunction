@@ -31,7 +31,6 @@ execute at @e[tag=s_cave_spawner,tag=!s_done] run setblock ~ ~ ~ structure_block
 execute at @e[tag=s_cave_spawner,tag=!s_done] run setblock ~ ~-1 ~ redstone_block
 tag @e[tag=s_cave_spawner,tag=!s_done] add s_done
 
-
 # execute at @a at @e[type=strider,nbt={Saddle:1b},distance=64..,sort=random,limit=1] if block ~ 31 ~ lava[level=0] if block ~ 31 ~16 lava if block ~16 31 ~ lava if block ~ 31 ~-16 lava if block ~-16 31 ~ lava unless entity @e[tag=s_nether_crystal,distance=..700] run summon armor_stand ~ ~ ~ {Marker:1,Invisible:1,Invulnerable:1,Tags:["s_nether_crystal"]}
 # execute at @e[tag=s_nether_crystal,tag=!s_done] run summon vex ~ 30 ~ {Invulnerable:1,NoAI:1,Tags:["nether_crystal_centre"]}
 # execute as @e[tag=nether_crystal_centre,limit=1] run function custom:ncrystalgen
