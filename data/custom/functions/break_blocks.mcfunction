@@ -1,1 +1,1 @@
-execute unless block ~ ~ ~ air run function custom:target_break_blocks
+execute unless block ~ ~ ~ #custom:empty run function custom:target_break_blocks

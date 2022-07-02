@@ -15,4 +15,7 @@ scoreboard players add @s var3 1
 tag @s[tag=level3] add break_stone
 execute at @s[tag=level3] run summon minecraft:area_effect_cloud ~ ~ ~ {Radius:.1,Duration:3,Color:12566527}
 execute at @s[tag=level3] run summon minecraft:area_effect_cloud ~ ~ ~ {Radius:.1,Duration:3,Color:16777215}
-execute positioned ~ ~-2 ~ run effect give @e[type=enderman,distance=..2.5] instant_damage 1 0
+
+execute positioned ~ ~-2 ~ run scoreboard players add @e[type=enderman,distance=..2.5] damaged 2
+
+execute positioned ~ ~-.5 ~ run scoreboard players add @e[tag=basic,distance=..2] damaged 1

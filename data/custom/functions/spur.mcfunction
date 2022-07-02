@@ -2,7 +2,7 @@ execute as @s[scores={cs_delay=..0}] run summon area_effect_cloud ~ ~ ~ {Duratio
 execute as @s[scores={cs_delay=..0}] as @e[tag=cs_target,limit=1] run tp @s 0 0 0 ~ ~
 execute as @s[scores={cs_delay=..0}] as @e[tag=cs_target,limit=1] at @s run tp @s ^ ^ ^64
 
-execute as @s[scores={cs_delay=..0}] anchored eyes run summon trident ~ ~ ~ {Tags:["level3","despawn","polar_star_bullet","assign"],Motion:[0.,.1,0.]}
+execute as @s[scores={cs_delay=..0}] anchored eyes run summon trident ~ ~ ~ {Tags:["level3","despawn","no_destroy","polar_star_bullet","assign"],Motion:[0.,.1,0.]}
 
 execute positioned ~ ~1.7 ~ as @e[tag=assign] run tp @s ^ ^ ^.3 ~ ~
 

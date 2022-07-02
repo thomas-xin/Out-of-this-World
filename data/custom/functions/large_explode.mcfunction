@@ -1,5 +1,5 @@
-kill @e[type=tnt,tag=!vanilla,distance=..5,sort=nearest,limit=64]
 tag @s remove tnt_check
+kill @e[type=tnt,tag=!vanilla,distance=..5,sort=nearest,limit=64]
 kill @e[tag=tnt_check,distance=..5,sort=nearest,limit=63]
 execute as @s[scores={e_strength=1}] run function custom:explode_1
 execute as @s[scores={e_strength=3}] run function custom:explode_1
@@ -39,4 +39,3 @@ execute as @s[scores={e_strength=16..31}] run function custom:explode_5
 execute as @s[scores={e_strength=48..}] run function custom:explode_5
 execute as @s[scores={e_strength=32..}] run function custom:explode_6
 kill @s
-execute as @e[tag=tnt_check,scores={e_check=1..},sort=random,limit=1] run function custom:large_explode

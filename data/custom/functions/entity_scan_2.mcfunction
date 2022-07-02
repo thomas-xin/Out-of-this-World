@@ -12,3 +12,5 @@ execute if entity @s[tag=king] unless entity @e[tag=blade3,distance=..4,limit=1]
 execute if entity @s[tag=exp_spawn] run summon experience_orb ~ ~ ~ {Value:1}
 
 execute if entity @s[tag=despawn] run function custom:cs_bullet
+
+execute if entity @s[type=tnt,tag=!vanilla] run summon area_effect_cloud ~ ~ ~ {Duration:2,Tags:["tnt_check"]}

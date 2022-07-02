@@ -3,6 +3,7 @@ tag @s[tag=priority] remove priority
 tag @s[type=player,gamemode=!creative,gamemode=!spectator,tag=!priority] add priority
 tag @s[type=player,tag=!priority] add check2
 tag @s[type=villager] add priority
+tag @s[type=warden] add priority
 tag @s[type=iron_golem] add priority
 tag @s[tag=priority] add check2
 tag @s[type=ravager] add priority
@@ -19,5 +20,6 @@ tag @s[type=pillager] add priority
 tag @s[type=evoker] add priority
 tag @s[type=illusioner] add priority
 tag @s[type=ender_dragon] add priority
-tag @s[type=turtle,nbt={NoAI:1b}] add priority
+tag @e[type=end_crystal,tag=!spin_crystal,tag=!perma_crystal] add priority
 tag @s[type=player,gamemode=!creative,gamemode=!spectator] add priority
+tag @s[tag=instakill_immune] remove priority

@@ -13,4 +13,5 @@ tag @s add break_stone
 execute at @s[tag=!level2] run particle poof ~ ~ ~ .3 .3 .3 .02 4 force
 execute at @s[tag=level3] run summon area_effect_cloud ~ ~ ~ {Radius:1,Duration:40,Color:16777215,Tags:["blade3"]}
 execute as @e[tag=blade3,sort=nearest,limit=1] run tp @s ~ ~ ~ ~ ~
-execute positioned ~ ~-2 ~ run effect give @e[type=enderman,distance=..2.5] instant_damage 1 1
+
+execute positioned ~ ~-1.5 ~ run scoreboard players add @e[type=enderman,distance=..2.5] damaged 3

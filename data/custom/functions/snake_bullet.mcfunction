@@ -26,14 +26,10 @@ scoreboard players add @s[tag=!level1] var0 1
 execute positioned ~ ~-.7 ~ run scoreboard players set @a[distance=.01..2.2] var1 1
 execute positioned ~ ~-.7 ~ as @a[distance=.01..2.2] run function custom:damage_players
 
-execute as @s[tag=level1] positioned ~ ~-.7 ~ run effect give @e[tag=living,distance=.01..2] instant_damage 1 0
-execute as @s[tag=level1] positioned ~ ~-.7 ~ run effect give @e[tag=undead,distance=.01..2] instant_health 1 0
+execute as @s[tag=level1] positioned ~ ~.5 ~ run scoreboard players add @e[tag=basic,distance=..2] damaged 4
 
-execute as @s[tag=level2] positioned ~ ~-1 ~ run effect give @e[tag=living,distance=.01..2.5] instant_damage 1 1
-execute as @s[tag=level2] positioned ~ ~-1 ~ run effect give @e[tag=undead,distance=.01..2.5] instant_health 1 1
+execute as @s[tag=level2] positioned ~ ~.25 ~ run scoreboard players add @e[tag=basic,distance=..2.5] damaged 6
 
-execute as @s[tag=level3] positioned ~ ~-1 ~ run effect give @e[tag=living,distance=.01..2.5] instant_damage 1 1
-execute as @s[tag=level3] positioned ~ ~-1 ~ run effect give @e[tag=undead,distance=.01..2.5] instant_health 1 1
+execute as @s[tag=level3] positioned ~ ~.25 ~ run scoreboard players add @e[tag=basic,distance=..2.5] damaged 8
 
-execute positioned ~ ~-2 ~ as @e[type=wither,distance=..3] run data merge entity @s {ActiveEffects:[{Id:6,Amplifier:0,Duration:20}]}
-execute positioned ~ ~-1 ~ at @e[type=ender_dragon,distance=..4] run summon creeper ~ ~ ~ {Fuse:0,ExplosionRadius:1}
+execute positioned ~ ~-.5 ~ if entity @e[tag=killable,distance=..2] run kill @s

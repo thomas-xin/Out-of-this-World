@@ -2,10 +2,10 @@ summon area_effect_cloud ~ ~ ~ {Duration:1,Tags:["cs_target"]}
 execute as @e[tag=cs_target,limit=1] run tp @s 0 0 0 ~ ~
 execute as @e[tag=cs_target,limit=1] at @s run tp @s ^ ^ ^64
 
-execute at @s[tag=level_1] anchored eyes run summon arrow ~ ~ ~ {damage:.25,Color:16777215,Tags:["level1","despawn","polar_star_bullet","assign"],Motion:[0.,.1,0.]}
+execute at @s[tag=level_1] anchored eyes run summon arrow ~ ~ ~ {damage:.25,Color:16777215,Tags:["level1","despawn","no_destroy","polar_star_bullet","assign"],Motion:[0.,.1,0.]}
 
-execute at @s[tag=level_2] anchored eyes run summon arrow ~ ~ ~ {damage:.5,Color:16777215,Tags:["level2","despawn","polar_star_bullet","assign","f1"],Motion:[0.,.1,0.]}
-execute at @s[tag=level_2] anchored eyes run summon arrow ~ ~ ~ {damage:.5,Color:16777215,Tags:["level2","despawn","polar_star_bullet","assign","f2"],Motion:[0.,.1,0.]}
+execute at @s[tag=level_2] anchored eyes run summon arrow ~ ~ ~ {damage:.5,Color:16777215,Tags:["level2","despawn","no_destroy","polar_star_bullet","assign","f1"],Motion:[0.,.1,0.]}
+execute at @s[tag=level_2] anchored eyes run summon arrow ~ ~ ~ {damage:.5,Color:16777215,Tags:["level2","despawn","no_destroy","polar_star_bullet","assign","f2"],Motion:[0.,.1,0.]}
 
 execute at @s[tag=level_3] anchored eyes run summon trident ~ ~ ~ {Tags:["level3","despawn","polar_star_bullet","assign"],Motion:[0.,.1,0.]}
 

@@ -1,11 +1,40 @@
-playsound minecraft:entity.illusioner.prepare_blindness player @a ~ ~ ~ 1 2
+execute store result score @s var2 run data get entity @s SelectedItem.tag.lv
+execute unless block 0 -64 0 dropper run setblock 0 -64 0 dropper[facing=down]
+item replace block 0 -64 0 container.0 from entity @s weapon.mainhand
 
-execute as @a[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{HideFlags:1}}}] run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick{display:{Name:'{"text":"Snake","color":"light_purple","bold":true,"italic":false}',Lore:['{"text":"Mending","color":"gray","italic":false}','{"text":"Level 3","color":"white","italic":false}']},Damage:25,HideFlags:1,level:3,Enchantments:[{id:"minecraft:mending",lvl:1s}]} 1
-execute as @a[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{HideFlags:2}}}] run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick{display:{Name:'{"text":"Polar Star","color":"dark_blue","bold":true,"italic":false}',Lore:['{"text":"Level 3","color":"white","italic":false}']},Damage:25,HideFlags:2,level:3,Enchantments:[{id:"minecraft:mending",lvl:1s}]} 1
-execute as @a[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{HideFlags:3}}}] run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick{display:{Name:'{"text":"Fireball","color":"yellow","bold":true,"italic":false}',Lore:['{"text":"Mending","color":"gray","italic":false}','{"text":"Level 3","color":"white","italic":false}']},Damage:25,HideFlags:3,level:3,Enchantments:[{id:"minecraft:mending",lvl:1s}]} 1
-execute as @a[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{HideFlags:4}}}] run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick{display:{Name:'{"text":"Machine Gun","color":"red","bold":true,"italic":false}',Lore:['{"text":"Level 3","color":"white","italic":false}']},Damage:25,HideFlags:4,level:3,Enchantments:[{id:"minecraft:mending",lvl:1s}]} 1
-execute as @a[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{HideFlags:5}}}] run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick{display:{Name:'{"text":"Missile Launcher","color":"gray","bold":true,"italic":false}',Lore:['{"text":"Mending","color":"gray","italic":false}','{"text":"Level 3","color":"white","italic":false}']},Damage:25,HideFlags:5,level:3,Enchantments:[{id:"minecraft:mending",lvl:1s}]} 1
-execute as @a[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{HideFlags:9}}}] run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick{display:{Name:'{"text":"Blade","color":"gray","bold":true,"italic":false}',Lore:['{"text":"Mending","color":"gray","italic":false}','{"text":"Level 3","color":"white","italic":false}']},Damage:25,HideFlags:9,level:3,Enchantments:[{id:"minecraft:mending",lvl:1s}]} 1
-execute as @a[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{HideFlags:7}}}] run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick{display:{Name:'{"text":"Bubbler","color":"aqua","bold":true,"italic":false}',Lore:['{"text":"Mending","color":"gray","italic":false}','{"text":"Level 3","color":"white","italic":false}']},Damage:25,HideFlags:7,level:3,Enchantments:[{id:"minecraft:mending",lvl:1s}]} 1
-execute as @a[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{HideFlags:10}}}] run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick{display:{Name:'{"text":"Super Missile Launcher","color":"gold","bold":true,"italic":false}',Lore:['{"text":"Level 3","color":"white","italic":false}']},Damage:25,HideFlags:10,level:3,Enchantments:[{id:"minecraft:mending",lvl:1s}]} 1
-execute as @a[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{HideFlags:12}}}] run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick{display:{Name:'{"text":"Nemesis","color":"blue","bold":true,"italic":false}',Lore:['{"text":"Level 3","color":"white","italic":false}']},Damage:25,HideFlags:12,level:3,Enchantments:[{id:"minecraft:mending",lvl:1s}]} 1
+tag @s remove cs_max
+summon area_effect_cloud ~ ~ ~ {Duration:2147483647,UUID:[I;-172967812,-1709553493,-1696901454,1881152716]}
+
+execute if entity @s[nbt={SelectedItem:{tag:{HideFlags:1}}}] run function custom:snake_level
+execute if entity @s[nbt={SelectedItem:{tag:{HideFlags:2}}}] run function custom:polar_star_level
+execute if entity @s[nbt={SelectedItem:{tag:{HideFlags:3}}}] run function custom:fireball_level
+execute if entity @s[nbt={SelectedItem:{tag:{HideFlags:4}}}] run function custom:machine_gun_level
+execute if entity @s[nbt={SelectedItem:{tag:{HideFlags:5}}}] run function custom:missile_launcher_level
+execute if entity @s[nbt={SelectedItem:{tag:{HideFlags:7}}}] run function custom:bubbler_level
+execute if entity @s[nbt={SelectedItem:{tag:{HideFlags:9}}}] run function custom:blade_level
+execute if entity @s[nbt={SelectedItem:{tag:{HideFlags:10}}}] run function custom:super_missile_launcher_level
+execute if entity @s[nbt={SelectedItem:{tag:{HideFlags:12}}}] run function custom:nemesis_level
+execute if entity @s[nbt={SelectedItem:{tag:{HideFlags:13}}}] run function custom:spur_level
+
+execute if score @s var3 matches 0 run scoreboard players set @s var2 0
+
+execute unless entity @s[tag=cs_max] run data modify block 0 -64 0 Items[0].tag.Enchantments set value []
+execute if entity @s[tag=cs_max] run data modify block 0 -64 0 Items[0].tag.Enchantments set value [{}]
+
+execute if score @s var1 matches 1 run data modify block 0 -64 0 Items[0].tag.display.Lore set value ['{"text":"Level 1","color":"white","italic":false}']
+execute if score @s var1 matches 2 run data modify block 0 -64 0 Items[0].tag.display.Lore set value ['{"text":"Level 2","color":"white","italic":false}']
+execute if score @s var1 matches 3 run data modify block 0 -64 0 Items[0].tag.display.Lore set value ['{"text":"Level 3","color":"white","italic":false}']
+
+execute store result entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse int 1 run scoreboard players get @s var0
+data modify block 0 -64 0 Items[0].tag.xp set from entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse
+
+execute store result entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse int 1 run scoreboard players get @s var1
+data modify block 0 -64 0 Items[0].tag.lv set from entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse
+
+execute store result entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse int 1 run scoreboard players get @s var2
+data modify block 0 -64 0 Items[0].tag.Damage set from entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse
+
+kill f5b0b87c-9a1a-48ab-9adb-56b270201ccc
+
+item replace entity @s weapon.mainhand from block 0 -64 0 container.0
+

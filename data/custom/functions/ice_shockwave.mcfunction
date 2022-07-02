@@ -1,5 +1,5 @@
 tp ^ ^ ^0.4
-execute if block ~ 0 ~ air positioned ~ -32 ~ run tag @s[distance=..32] add void_low
+execute if block ~ 0 ~ #custom:empty positioned ~ -32 ~ run tag @s[distance=..32] add void_low
 tag @s[tag=thru] remove thru
 execute unless entity @s[tag=void_low] positioned ~ ~.5 ~ run function custom:check_solid
 execute if entity @s[tag=thru] run tp @s ~ ~0.45 ~ ~ 0
@@ -9,14 +9,10 @@ execute unless entity @s[tag=thru] run tp @s ~ ~-0.45 ~ ~ 0
 execute unless entity @s[tag=thru] run scoreboard players remove @s var0 1
 execute at @s run tp ^ ^ ^0.05
 
-effect give @e[tag=basic,distance=..1.5] instant_damage 1 0
+scoreboard players add @e[tag=basic,distance=..1.5] damaged 2
 effect give @a[distance=..1.5] instant_damage 1 0
-effect give @e[tag=undead,tag=!smudge_boss,distance=..1.5] instant_health 1 0
-effect give @e[tag=basic,distance=..2] slowness 16 1
-effect give @e[tag=undead,tag=!smudge_boss,distance=..2] slowness 16 1
-effect give @p[distance=..2] slowness 16 1
-effect give @e[tag=basic,distance=..2] weakness 8
-effect give @e[tag=undead,tag=!smudge_boss,distance=..2] weakness 8
+effect give @e[tag=killable,distance=..2] slowness 16 1
+effect give @e[tag=killable,distance=..2] weakness 8
 effect give @p[distance=..2] weakness 8
 effect give @p[distance=..2] mining_fatigue 24
 effect give @p[distance=..2] hunger 4 127

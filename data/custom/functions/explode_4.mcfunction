@@ -5,12 +5,8 @@ fill ~-3 ~-3 ~-3 ~3 ~3 ~3 glass replace obsidian
 fill ~-3 ~-3 ~-3 ~3 ~3 ~3 glass keep
 fill ~-7 ~-7 ~-7 ~7 ~7 ~7 air replace water
 fill ~-7 ~-7 ~-7 ~7 ~7 ~7 air replace lava
-kill @e[tag=basic,distance=..16]
-kill @e[tag=undead,distance=..16]
-effect give @e[tag=basic,distance=..30] instant_damage 4 4
-effect give @e[tag=undead,distance=..30] instant_health 4 4
-execute as @e[type=wither,distance=..30] run data merge entity @s {ActiveEffects:[{Id:6,Amplifier:4,Duration:5}]}
-execute at @e[type=ender_dragon,distance=..30] run summon creeper ~ ~ ~ {Fuse:0,Invulnerable:1,ExplosionRadius:5,powered:1}
+kill @e[tag=basic,tag=!instakill_immune,distance=..16]
+scoreboard players add @e[tag=basic,distance=..30] damaged 40
 summon area_effect_cloud ~-3 ~ ~ {Duration:70,Tags:["explosion_flash"]}
 summon area_effect_cloud ~ ~ ~-3 {Duration:70,Tags:["explosion_flash"]}
 summon area_effect_cloud ~3 ~ ~ {Duration:70,Tags:["explosion_flash"]}

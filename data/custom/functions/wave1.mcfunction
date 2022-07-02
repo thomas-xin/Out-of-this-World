@@ -1,9 +1,6 @@
 particle explosion ~ ~ ~ 1 .5 1 1 1 force
 effect give @a[distance=..4] instant_damage 1 1
-effect give @e[tag=basic,distance=..4] instant_damage 2 2
-effect give @e[tag=undead,distance=..4] instant_health 2 2
-execute as @e[type=wither,tag=!wither_main,tag=!minion,distance=..6] run data merge entity @s {ActiveEffects:[{Id:6,Amplifier:2,Duration:5}]}
-execute at @e[type=ender_dragon,distance=..5] run summon creeper ~ ~ ~ {Fuse:0,Invulnerable:1,ExplosionRadius:3,powered:1}
+scoreboard players add @e[tag=basic,distance=..4] damaged 3
 execute positioned ^ ^ ^-3 run fill ~-2 ~ ~-2 ~2 ~5 ~2 air replace #impermeable
 execute as @s[tag=!tsunami_w] positioned ^ ^ ^-3 run fill ~-1 ~ ~-1 ~1 ~3 ~1 air replace water
 execute as @s[tag=tsunami_w] run fill ^ ^-1 ^-2 ^ ^1 ^-2 water[level=9] keep

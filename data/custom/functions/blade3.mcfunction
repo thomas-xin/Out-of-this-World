@@ -20,13 +20,11 @@ playsound minecraft:block.dispenser.launch player @a ~ ~ ~ 0.75 2
 tag @e[tag=assign] remove assign
 kill @e[tag=cs_target]
 execute positioned ~ ~2 ~ unless entity @e[tag=king,distance=..4] run summon vex ~ ~-2 ~ {Glowing:1,Invulnerable:1,NoAI:1,Tags:["king"],PersistenceRequired:1b,HandItems:[{id:diamond_sword,Count:1b,tag:{Enchantments:[{id:sharpness,lvl:1s}]}},{}]}
-execute as @e[tag=king,sort=nearest,limit=1] run tp @s ~ ~2 ~ ~180 ~
-scoreboard players set @a[distance=.01..3.5] var1 1
-execute as @a[distance=.01..3.5] run function custom:damage_players
-effect give @e[tag=living,distance=.01..3.5] instant_damage 1 0
-effect give @e[tag=undead,distance=.01..3.5] instant_health 1 0
-effect give @e[tag=living,distance=.01..2.5] instant_damage 21 0
-effect give @e[tag=undead,distance=.01..2.5] instant_health 21 0
-execute positioned ~ ~-2 ~ as @e[type=wither,distance=..4] run data merge entity @s {ActiveEffects:[{Id:6,Amplifier:0,Duration:20}]}
-execute positioned ~ ~-2 ~ at @e[type=ender_dragon,distance=..5] run summon creeper ~ ~ ~ {Fuse:0,ExplosionRadius:1}
+execute as @e[tag=king,sort=nearest,distance=..2.5,limit=1] run tp @s ~ ~2 ~ ~180 ~
 particle sweep_attack ~ ~1 ~ 3 1 3 1 4 force
+
+scoreboard players set @a[distance=..3.5] var1 1
+execute as @a[distance=..3.5] run function custom:damage_players
+
+scoreboard players add @e[tag=basic,distance=..3.5] damaged 1
+scoreboard players add @e[tag=basic,distance=..2.5,sort=random,limit=3] damaged 2

@@ -13,11 +13,11 @@ tag @s remove level_1
 tag @s remove level_2
 tag @s remove level_3
 
-execute as @s[scores={cs_delay=2..},gamemode=!creative,nbt=!{SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{HideFlags:13}}}] run scoreboard players reset @s[nbt=!{SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{HideFlags:7}}}] cs_weapons
+execute if entity @s[gamemode=!creative,gamemode=!spectator] unless entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick"}}] run function custom:level_up_0
+execute if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick"}}] unless entity @s[nbt={SelectedItem:{tag:{HideFlags:0}}}] run function custom:level_up_1
+
+execute as @s[scores={cs_delay=2..},gamemode=!creative,nbt=!{SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{HideFlags:13}}}] run scoreboard players reset @s[nbt=!{SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{HideFlags:7}}}] cs_weapons
 scoreboard players set @s[scores={cs_weapons=1..},gamemode=!creative] cs_weapons 1
 scoreboard players remove @s[scores={cs_delay=-3..}] cs_delay 1
-
-execute as @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{level:1,Damage:0}}}] at @s[nbt=!{SelectedItem:{tag:{HideFlags:13}}}] run function custom:level_up_1
-execute as @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{level:2,Damage:0}}}] at @s[nbt=!{SelectedItem:{tag:{HideFlags:13}}}] run function custom:level_up_2
 
 execute as @s[scores={cs_weapons=1..}] run function custom:fire_weapon
