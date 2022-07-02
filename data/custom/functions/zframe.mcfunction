@@ -34,6 +34,8 @@ execute at @e[tag=tri_nuke] run summon area_effect_cloud ~ ~ ~ {Duration:2,Tags:
 # execute as @e[tag=channeling] as @e[tag=channeling2,sort=nearest,limit=1] run tp @s ~ ~ ~ ~ ~
 kill @e[tag=channeling,nbt={inGround:1b}]
 
+execute as @a at @s run function custom:player_glow
+execute as @e[tag=glow] at @s run function custom:glow_eval
 execute as @e[type=!item] at @s run function custom:entity_scan_1
 
 execute as @e[tag=tnt_check,scores={e_strength=1..}] at @s unless entity @e[type=tnt,tag=!vanilla,distance=..5] run function custom:large_explode

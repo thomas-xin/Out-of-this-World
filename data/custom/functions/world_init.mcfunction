@@ -19,6 +19,7 @@ scoreboard objectives add smudge_id dummy
 scoreboard objectives add compare_id dummy
 scoreboard objectives add cs_delay dummy
 scoreboard objectives add spur_charge dummy
+scoreboard objectives add light_delay dummy
 
 scoreboard objectives add damage_taken minecraft.custom:minecraft.damage_taken
 scoreboard objectives add curr_xp xp
@@ -30,7 +31,9 @@ scoreboard objectives add var2 dummy
 scoreboard objectives add var3 dummy
 
 scoreboard players set __1__ var0 1
+scoreboard players set __2__ var0 2
 scoreboard players set __5__ var0 5
+scoreboard players set __8__ var0 8
 scoreboard players set __10__ var0 10
 scoreboard players set __-25__ var0 -25
 scoreboard players set __512__ var0 512

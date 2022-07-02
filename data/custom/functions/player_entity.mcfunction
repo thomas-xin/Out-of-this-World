@@ -1,9 +1,3 @@
-execute store result score @s var0 run data get entity @s SelectedItem.Count
-execute if score @s var0 matches 1.. positioned ~ ~1 ~ run function custom:light_main
-
-execute store result score @s var0 run data get entity @s Inventory[{Slot:-106b}].Count
-execute if score @s var0 matches 1.. positioned ~ ~1 ~ run function custom:light_off
-
 tag @s[tag=immune] remove flying
 tag @s[nbt={abilities:{flying:1b}}] add immune
 
