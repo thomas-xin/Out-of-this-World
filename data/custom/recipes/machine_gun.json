@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "cave_story_weapons",
+    "pattern": [
+        "  #",
+        "PCS",
+        "BB#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:redstone"
+        },
+        "P": {
+            "item": "minecraft:popped_chorus_fruit"
+        },
+        "C": {
+            "item": "minecraft:comparator"
+        },
+        "S": {
+            "item": "minecraft:spyglass"
+        },
+        "B": {
+            "item": "minecraft:brick"
+        }
+    },
+    "result": {
+        "item": "minecraft:cat_spawn_egg",
+        "count": 1
+    }
+}

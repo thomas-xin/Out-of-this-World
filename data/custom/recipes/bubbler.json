@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "cave_story_weapons",
+    "pattern": [
+        "  #",
+        "HWE",
+        "cc#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:prismarine_shard"
+        },
+        "H": {
+            "item": "minecraft:heart_of_the_sea"
+        },
+        "W": {
+            "item": "minecraft:water_bucket"
+        },
+        "E": {
+            "item": "minecraft:ender_pearl"
+        },
+        "c": {
+            "item": "minecraft:copper_ingot"
+        }
+    },
+    "result": {
+        "item": "minecraft:cod_spawn_egg",
+        "count": 1
+    }
+}

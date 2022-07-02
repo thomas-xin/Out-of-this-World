@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "cave_story_weapons",
+    "pattern": [
+        "  #",
+        "EGF",
+        "ii#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:lapis_lazuli"
+        },
+        "E": {
+            "item": "minecraft:end_crystal"
+        },
+        "G": {
+            "item": "minecraft:gunpowder"
+        },
+        "F": {
+            "item": "minecraft:glass"
+        },
+        "i": {
+            "item": "minecraft:iron_ingot"
+        }
+    },
+    "result": {
+        "item": "minecraft:axolotl_spawn_egg",
+        "count": 1
+    }
+}

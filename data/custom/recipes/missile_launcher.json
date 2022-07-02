@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "cave_story_weapons",
+    "pattern": [
+        "  #",
+        "TGH",
+        "EE#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:iron_bars"
+        },
+        "T": {
+            "item": "minecraft:tnt_minecart"
+        },
+        "G": {
+            "item": "minecraft:golden_apple"
+        },
+        "H": {
+            "item": "minecraft:hopper"
+        },
+        "E": {
+            "item": "minecraft:end_stone"
+        }
+    },
+    "result": {
+        "item": "minecraft:chicken_spawn_egg",
+        "count": 1
+    }
+}

@@ -1,0 +1,24 @@
+{
+	"replace":true,
+	"values":[
+		"minecraft:structure_void",
+		"#minecraft:replaceable_plants",
+		"#minecraft:small_flowers",
+		"#minecraft:bee_growables",
+		"#minecraft:wall_post_override",
+		"#minecraft:wall_signs",
+		"#minecraft:campfires",
+		"#minecraft:dragon_transparent",
+		"#minecraft:fire",
+		"#minecraft:underwater_bonemeals",
+		"minecraft:lily_pad",
+		"minecraft:wall_torch",
+		"minecraft:soul_wall_torch",
+		"minecraft:redstone_wall_torch",
+		"minecraft:tripwire_hook",
+		"minecraft:red_mushroom",
+		"minecraft:brown_mushroom",
+		"minecraft:kelp",
+		"minecraft:snow"
+	]
+}

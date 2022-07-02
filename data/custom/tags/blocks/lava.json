@@ -1,0 +1,10 @@
+{
+	"replace":false,
+	"values":[
+		"#minecraft:strider_warm_blocks",
+		"minecraft:lava",
+		"minecraft:lava_cauldron",
+		"minecraft:magma_block",
+		"minecraft:obsidian"
+	]
+}

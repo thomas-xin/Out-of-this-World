@@ -1,0 +1,24 @@
+{
+	"replace":true,
+	"values":[
+		"#minecraft:enderman_holdable",
+		"#minecraft:leaves",
+		"#minecraft:infiniburn_overworld",
+		"#minecraft:wart_blocks",
+		"#minecraft:fall_damage_resetting",
+		"#minecraft:climbable",
+		"#minecraft:rails",
+		"#minecraft:dampens_vibrations",
+		"#minecraft:mineable/hoe",
+		"#minecraft:mineable/shovel",
+		"minecraft:end_rod",
+		"minecraft:nether_portal",
+		"minecraft:snow_block",
+		"minecraft:powder_snow",
+		"minecraft:honeycomb_block",
+		"minecraft:brown_mushroom_block",
+		"minecraft:red_mushroom_block",
+		"minecraft:honey_block",
+		"minecraft:slime_block"
+	]
+}

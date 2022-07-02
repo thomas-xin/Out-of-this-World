@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "cave_story_weapons",
+    "pattern": [
+        "  /",
+        "NDR",
+        "UU/"
+    ],
+    "key": {
+        "/": {
+            "item": "minecraft:end_rod"
+        },
+        "N": {
+            "item": "minecraft:nether_star"
+        },
+        "D": {
+            "item": "minecraft:daylight_detector"
+        },
+        "R": {
+            "item": "minecraft:respawn_anchor"
+        },
+        "U": {
+            "item": "minecraft:diamond"
+        }
+    },
+    "result": {
+        "item": "minecraft:fox_spawn_egg",
+        "count": 1
+    }
+}

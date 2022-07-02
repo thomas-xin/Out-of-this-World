@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "cave_story_weapons",
+    "pattern": [
+        "  #",
+        "CCS",
+        "NN#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:ghast_tear"
+        },
+        "C": {
+            "item": "minecraft:carrot_on_a_stick"
+        },
+        "S": {
+            "item": "minecraft:soul_campfire"
+        },
+        "N": {
+            "item": "minecraft:nether_brick"
+        }
+    },
+    "result": {
+        "item": "minecraft:allay_spawn_egg",
+        "count": 1
+    }
+}

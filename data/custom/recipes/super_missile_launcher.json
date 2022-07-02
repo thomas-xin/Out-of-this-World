@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "cave_story_weapons",
+    "pattern": [
+        "  #",
+        "FED",
+        "AA#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:glowstone_dust"
+        },
+        "F": {
+            "item": "minecraft:carrot_on_a_stick"
+        },
+        "E": {
+            "item": "minecraft:enchanted_golden_apple"
+        },
+        "D": {
+            "item": "minecraft:dragon_head"
+        },
+        "A": {
+            "item": "minecraft:ancient_debris"
+        }
+    },
+    "result": {
+        "item": "minecraft:donkey_spawn_egg",
+        "count": 1
+    }
+}

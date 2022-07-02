@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "cave_story_weapons",
+    "pattern": [
+        " # ",
+        "EDE",
+        " T "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:totem_of_undying"
+        },
+        "E": {
+            "item": "minecraft:experience_bottle"
+        },
+        "D": {
+            "item": "minecraft:diamond_sword"
+        },
+        "T": {
+            "item": "minecraft:trident"
+        }
+    },
+    "result": {
+        "item": "minecraft:cow_spawn_egg",
+        "count": 1
+    }
+}
