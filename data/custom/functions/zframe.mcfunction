@@ -70,8 +70,8 @@ execute if entity @e[tag=tracked,limit=1] as @e[type=item,nbt={Item:{tag:{HideFl
 
 execute if score __slow_loop__ var0 matches 0 if score __entities__ var0 matches 2000.. run kill @e[type=item]
 execute if score __global_delay__ var0 matches 0 if score __entities__ var0 matches 1200.. run kill @e[type=item,tag=!instakill_immune,sort=random,limit=128]
-execute if score __fast_loop__ var0 matches 0 if score __entities__ var0 matches 1000.. as @e[type=item,tag=!instakill_immune,sort=random,limit=32] unless entity @p[distance=..4] run kill @s
-execute if score __global_delay__ var0 matches 0 if score __entities__ var0 matches 900.. as @e[type=item,tag=!instakill_immune,sort=random,limit=4] unless entity @p[distance=..12] run kill @s
-execute if score __slow_loop__ var0 matches 0 if score __entities__ var0 matches 700.. as @e[type=item,tag=!instakill_immune,sort=random,limit=1] unless entity @p[distance=..32] run kill @s
+execute if score __fast_loop__ var0 matches 0 if score __entities__ var0 matches 1000.. as @e[type=item,tag=!instakill_immune,sort=random,limit=32] at @s unless entity @p[distance=..4] run kill @s
+execute if score __global_delay__ var0 matches 0 if score __entities__ var0 matches 900.. as @e[type=item,tag=!instakill_immune,sort=random,limit=4] at @s unless entity @p[distance=..12] run kill @s
+execute if score __slow_loop__ var0 matches 0 if score __entities__ var0 matches 700.. as @e[type=item,tag=!instakill_immune,sort=random,limit=1] at @s unless entity @p[distance=..32] run kill @s
 
 execute if score __slow_loop__ var0 matches 64 positioned 0 0 0 run function custom:generatestructures
