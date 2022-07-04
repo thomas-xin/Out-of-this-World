@@ -11,8 +11,8 @@ execute if score __slow_loop__ var0 matches 0 run forceload remove all
 execute if score __slow_loop__ var0 matches 0 run forceload add -96 -96 96 96
 
 summon area_effect_cloud 0 0 0 {Tags:["blow_centre"],Duration:33}
-execute positioned 0 0 0 run tp @e[distance=..1,tag=blow_centre,sort=random,limit=16] ~ ~ ~ ~7 0
-execute positioned 0 0 0 run tp @e[distance=..1,tag=blow_centre,sort=random,limit=16] ~ ~ ~ ~-23 0
+execute positioned 0 0 0 run tp @e[distance=..1,tag=blow_centre,sort=random,limit=16] ~ ~ ~ ~7.3 0
+execute positioned 0 0 0 run tp @e[distance=..1,tag=blow_centre,sort=random,limit=16] ~ ~ ~ ~-23.4 0
 
 summon area_effect_cloud 0 0 0 {Tags:["blow"],Duration:33}
 execute positioned 0 0 0 at @e[distance=..1,tag=blow_centre,sort=random,limit=3] as @e[distance=..1,tag=blow,sort=random,limit=1] run tp @s ^ ^ ^16 ~ ~
