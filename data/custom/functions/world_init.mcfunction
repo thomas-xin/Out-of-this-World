@@ -41,7 +41,7 @@ scoreboard players set __1024__ var0 1024
 scoreboard players set __2048__ var0 2048
 scoreboard players set __16384__ var0 16384
 
-scoreboard objectives setdisplay sidebar count
+# scoreboard objectives setdisplay sidebar count
 
 difficulty hard
 
