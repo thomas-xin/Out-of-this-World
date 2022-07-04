@@ -46,3 +46,5 @@ scoreboard objectives setdisplay sidebar count
 difficulty hard
 
 gamerule commandBlockOutput false
+
+kill @e[type=item]
