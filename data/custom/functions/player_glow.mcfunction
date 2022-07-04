@@ -14,7 +14,7 @@ execute if score @s var2 matches 1.. run scoreboard players operation @s var2 +=
 execute if score @s var2 > @s var1 store result score @s var1 run scoreboard players get @s var2
 
 execute if score @s var1 matches 1.. run scoreboard players remove @s var1 1
-execute if score @s var1 matches 1.. if score @s light_delay < @s var1 run scoreboard players add @s light_delay 2
+execute if score @s var1 matches 1.. unless score @s light_delay >= @s var1 run scoreboard players add @s light_delay 2
 execute if score @s var1 < @s light_delay run scoreboard players remove @s light_delay 1
 execute unless score @s var1 matches 1.. if score @s light_delay matches 1.. store result score @s var1 run scoreboard players get @s light_delay
 execute store result score @s var0 run scoreboard players get @s light_delay
