@@ -3,7 +3,7 @@ tag @s[nbt={abilities:{flying:1b}}] add immune
 
 tag @s[tag=assigned] remove assigned
 execute if entity @s[scores={deaths=1..}] run scoreboard players remove @e[tag=wither_main,sort=nearest,limit=1] damaged 24
-execute if entity @s[scores={deaths=1..}] as @e[type=item,distance=..3] run data merge entity @s {Age:-32768,Tags:["instakill_immune"],Health:2147483647}
+execute if entity @s[scores={deaths=1..}] as @e[type=item,distance=..3] run data merge entity @s {Age:-32768,Tags:["instakill_immune"],Health:200,Fire:-2147483648}
 scoreboard players reset @s[scores={deaths=1..}] deaths
 
 effect give @s[tag=trident] conduit_power 16 9
