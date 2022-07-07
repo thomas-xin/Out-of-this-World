@@ -32,4 +32,4 @@ execute as @s[tag=level2] positioned ~ ~.25 ~ run scoreboard players add @e[tag=
 
 execute as @s[tag=level3] positioned ~ ~.25 ~ run scoreboard players add @e[tag=basic,distance=..2.5] damaged 8
 
-execute positioned ~ ~-.5 ~ if entity @e[tag=basic,distance=..2] run kill @s
+execute positioned ~ ~.5 ~ if entity @e[tag=basic,distance=..2] run kill @s
