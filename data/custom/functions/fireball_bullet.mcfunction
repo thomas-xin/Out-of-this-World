@@ -21,8 +21,8 @@ kill @s[tag=level3,scores={var3=50..}]
 scoreboard players add @s var3 1
 scoreboard players set @s[scores={var3=8..}] var1 64
 
-execute positioned ~ ~-.7 ~ run scoreboard players set @a[distance=.01..2] var1 1
-execute positioned ~ ~-.7 ~ as @a[distance=.01..2] run function custom:damage_players
+execute positioned ~ ~-.7 ~ run scoreboard players set @a[distance=..2] var1 1
+execute positioned ~ ~-.7 ~ as @a[distance=..2] run function custom:damage_players
 
 execute as @s[tag=level1] positioned ~ ~-.5 ~ run scoreboard players add @e[tag=basic,distance=..1.75] damaged 2
 
@@ -30,4 +30,4 @@ execute as @s[tag=level2] positioned ~ ~-.75 ~ run scoreboard players add @e[tag
 
 execute as @s[tag=level3] positioned ~ ~-.75 ~ run scoreboard players add @e[tag=basic,distance=..2] damaged 4
 
-execute positioned ~ ~-.5 ~ if entity @e[tag=killable,distance=..1.75] run kill @s
+execute positioned ~ ~-.5 ~ if entity @e[tag=basic,distance=..1.75] run kill @s
