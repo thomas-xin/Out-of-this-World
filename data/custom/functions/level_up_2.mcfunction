@@ -21,9 +21,9 @@ execute if score @s var3 matches 0 run scoreboard players set @s var2 0
 execute unless entity @s[tag=cs_max] run data modify block 0 -64 0 Items[0].tag.Enchantments set value []
 execute if entity @s[tag=cs_max] run data modify block 0 -64 0 Items[0].tag.Enchantments set value [{}]
 
-execute if score @s var1 matches 1 run data modify block 0 -64 0 Items[0].tag.display.Lore set value ['{"text":"Level 1","color":"white","italic":false}']
-execute if score @s var1 matches 2 run data modify block 0 -64 0 Items[0].tag.display.Lore set value ['{"text":"Level 2","color":"white","italic":false}']
-execute if score @s var1 matches 3 run data modify block 0 -64 0 Items[0].tag.display.Lore set value ['{"text":"Level 3","color":"white","italic":false}']
+execute if score @s var1 matches 1 run data modify block 0 -64 0 Items[0].tag.display.Lore[0] set value '{"text":"Level 1","color":"white","italic":false}'
+execute if score @s var1 matches 2 run data modify block 0 -64 0 Items[0].tag.display.Lore[0] set value '{"text":"Level 2","color":"white","italic":false}'
+execute if score @s var1 matches 3 run data modify block 0 -64 0 Items[0].tag.display.Lore[0] set value '{"text":"Level 3","color":"white","italic":false}'
 
 execute store result entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse int 1 run scoreboard players get @s var0
 data modify block 0 -64 0 Items[0].tag.xp set from entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse

@@ -1,20 +1,19 @@
 {
     "type": "minecraft:crafting_shaped",
-    "group": "cave_story_weapons",
     "pattern": [
         "  #",
-        "CTB",
+        "AGB",
         "nn#"
     ],
     "key": {
         "#": {
             "item": "minecraft:echo_shard"
         },
-        "C": {
-            "item": "minecraft:carrot_on_a_stick"
+        "A": {
+            "item": "minecraft:axolotl_spawn_egg"
         },
-        "T": {
-            "item": "minecraft:trident"
+        "G": {
+            "item": "minecraft:glow_squid_spawn_egg"
         },
         "B": {
             "item": "minecraft:beacon"

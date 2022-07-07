@@ -1,6 +1,5 @@
 {
     "type": "minecraft:crafting_shaped",
-    "group": "cave_story_weapons",
     "pattern": [
         "  #",
         "HWE",
@@ -8,7 +7,7 @@
     ],
     "key": {
         "#": {
-            "item": "minecraft:prismarine_shard"
+            "item": "minecraft:prismarine_crystals"
         },
         "H": {
             "item": "minecraft:heart_of_the_sea"

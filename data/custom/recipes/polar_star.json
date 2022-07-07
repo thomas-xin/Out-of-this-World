@@ -1,9 +1,8 @@
 {
     "type": "minecraft:crafting_shaped",
-    "group": "cave_story_weapons",
     "pattern": [
         "  #",
-        "EGF",
+        "EGZ",
         "ii#"
     ],
     "key": {
@@ -16,7 +15,7 @@
         "G": {
             "item": "minecraft:gunpowder"
         },
-        "F": {
+        "Z": {
             "item": "minecraft:glass"
         },
         "i": {

@@ -1,17 +1,16 @@
 {
     "type": "minecraft:crafting_shaped",
-    "group": "cave_story_weapons",
     "pattern": [
         "  #",
-        "FED",
+        "CED",
         "AA#"
     ],
     "key": {
         "#": {
             "item": "minecraft:glowstone_dust"
         },
-        "F": {
-            "item": "minecraft:carrot_on_a_stick"
+        "C": {
+            "item": "minecraft:chicken_spawn_egg"
         },
         "E": {
             "item": "minecraft:enchanted_golden_apple"

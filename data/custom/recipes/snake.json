@@ -1,17 +1,19 @@
 {
     "type": "minecraft:crafting_shaped",
-    "group": "cave_story_weapons",
     "pattern": [
         "  #",
-        "CCS",
+        "ABS",
         "NN#"
     ],
     "key": {
         "#": {
             "item": "minecraft:ghast_tear"
         },
-        "C": {
-            "item": "minecraft:carrot_on_a_stick"
+        "A": {
+            "item": "minecraft:axolotl_spawn_egg"
+        },
+        "B": {
+            "item": "minecraft:bat_spawn_egg"
         },
         "S": {
             "item": "minecraft:soul_campfire"
