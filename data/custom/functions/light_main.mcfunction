@@ -13,6 +13,7 @@ scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:campfire"}}] var1 16
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:sea_lantern"}}] var1 18
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:shroomlight"}}] var1 16
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:glow_berries"}}] var1 15
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:fire_charge"}}] var1 15
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:end_rod"}}] var1 15
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:torch"}}] var1 15
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:crying_obsidian"}}] var1 11

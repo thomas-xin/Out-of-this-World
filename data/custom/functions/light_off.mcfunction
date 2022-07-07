@@ -11,6 +11,7 @@ scoreboard players set @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:campfire"}]}
 scoreboard players set @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:sea_lantern"}]}] var2 18
 scoreboard players set @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:shroomlight"}]}] var2 16
 scoreboard players set @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:glow_berries"}]}] var2 15
+scoreboard players set @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:fire_charge"}]}] var2 15
 scoreboard players set @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:end_rod"}]}] var2 15
 scoreboard players set @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:torch"}]}] var2 15
 scoreboard players set @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:crying_obsidian"}]}] var2 11
