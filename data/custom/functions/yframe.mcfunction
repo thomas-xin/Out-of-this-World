@@ -36,7 +36,7 @@ kill @e[tag=channeling,nbt={inGround:1b}]
 
 execute as @a at @s run function custom:player_glow
 execute as @e[tag=glow] at @s run function custom:glow_eval
-execute as @e[type=!item] at @s run function custom:entity_scan_1
+function custom:entity_scan_1
 
 execute as @e[tag=tnt_check,scores={e_strength=1..}] at @s unless entity @e[type=tnt,tag=!vanilla,distance=..5] run function custom:large_explode
 
@@ -50,7 +50,7 @@ execute if entity @e[tag=wither_load] run function custom:wither_loop
 execute as @a at @s run function custom:player_entity
 
 execute as @e[tag=wind,sort=random,limit=1] at @s run function custom:windrandomizer
-execute as @e[type=!item] at @s run function custom:entity_scan_2
+function custom:entity_scan_2
 
 execute at @e[type=tnt,tag=!vanilla] as @e[tag=tnt_check,distance=..5] run scoreboard players add @s e_strength 1
 # execute as @e[tag=tnt_check] run scoreboard players operation @s e_check = @s e_strength
