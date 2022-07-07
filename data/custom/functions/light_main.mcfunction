@@ -43,3 +43,4 @@ scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:dragon_egg"}}] var1 2
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:end_portal_frame"}}] var1 2
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:sculk_sensor"}}] var1 2
 scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:small_amethyst_bud"}}] var1 2
+scoreboard players set @s[nbt={SelectedItem:{id:"minecraft:magma_cream"}}] var1 2

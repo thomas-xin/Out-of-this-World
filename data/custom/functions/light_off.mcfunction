@@ -41,3 +41,4 @@ scoreboard players set @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:dragon_egg"}
 scoreboard players set @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:end_portal_frame"}]}] var2 2
 scoreboard players set @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:sculk_sensor"}]}] var2 2
 scoreboard players set @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:small_amethyst_bud"}]}] var2 2
+scoreboard players set @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:magma_cream"}]}] var2 2
