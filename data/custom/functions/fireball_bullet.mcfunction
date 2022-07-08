@@ -11,7 +11,7 @@ execute as @s[scores={var3=24..}] run setblock ~ ~.7 ~ fire keep
 
 execute store result entity @s Motion[0] double 0.01 run scoreboard players get @s var0
 tag @s[tag=thru] remove thru
-execute positioned ~ ~1.2 ~ run function custom:check_solid
+execute positioned ~ ~.9 ~ run function custom:check_solid
 execute if entity @s[tag=thru] store result entity @s Motion[1] double 0.006 run scoreboard players get @s var1
 execute store result entity @s Motion[2] double 0.01 run scoreboard players get @s var2
 

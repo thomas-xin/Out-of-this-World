@@ -1,4 +1,4 @@
-execute at @s[scores={spur_charge=1..39}] run playsound minecraft:block.note_block.iron_xylophone player @a ~ ~ ~ .3 2
+execute at @s[scores={spur_charge=2..39}] run playsound minecraft:block.note_block.iron_xylophone player @a ~ ~ ~ .3 2
 execute at @s[scores={spur_charge=40..99}] run playsound minecraft:block.note_block.xylophone player @a ~ ~ ~ .4 0.75
 execute at @s[scores={spur_charge=100..299}] run playsound minecraft:block.note_block.xylophone player @a ~ ~ ~ .5 1
 
