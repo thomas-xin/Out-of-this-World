@@ -23,7 +23,7 @@ execute if score @s[type=wither] health_target matches ..0 run summon experience
 
 execute if score @s[type=player] health_target matches ..0 run effect give @s instant_damage 1
 execute if entity @s[type=end_crystal] run summon creeper ~ ~ ~ {Fuse:0,ExplosionRadius:7}
-execute if score @s[type=ender_dragon] health_target matches ..0 run summon creeper ~ ~ ~ {Fuse:0,ExplosionRadius:8}
+execute if score @s[type=ender_dragon] health_target matches ..0 run summon creeper ~ ~ ~ {Fuse:0,ExplosionRadius:6}
 execute if score @s[type=!player,type=!end_crystal,type=!ender_dragon,nbt=!{Invulnerable:1b}] health_target matches ..0 run kill @s
 execute if score @s health_target matches 1.. store result entity @s Health float 0.5 run scoreboard players get @s health_target
 data merge entity @s[scores={health_target=1..}] {HurtTime:20}
