@@ -18,8 +18,8 @@ execute if entity @s[nbt={SelectedItem:{tag:{HideFlags:13}}}] run function custo
 
 execute if score @s var3 matches 0 run scoreboard players set @s var2 0
 
-execute unless entity @s[tag=cs_max] run data modify block 0 -64 0 Items[0].tag.Enchantments set value []
-execute if entity @s[tag=cs_max] run data modify block 0 -64 0 Items[0].tag.Enchantments set value [{}]
+execute unless entity @s[tag=cs_max] in overworld run data modify block 0 -64 0 Items[0].tag.Enchantments set value []
+execute if entity @s[tag=cs_max] in overworld run data modify block 0 -64 0 Items[0].tag.Enchantments set value [{}]
 
 execute if score @s var1 matches 1 in overworld run data modify block 0 -64 0 Items[0].tag.display.Lore[0] set value '{"text":"Level 1","color":"white","italic":false}'
 execute if score @s var1 matches 2 in overworld run data modify block 0 -64 0 Items[0].tag.display.Lore[0] set value '{"text":"Level 2","color":"white","italic":false}'
