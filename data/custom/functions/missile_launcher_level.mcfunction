@@ -2,7 +2,7 @@
 
 execute if score @s var0 matches ..9 run scoreboard players set @s var1 1
 execute if score @s var0 matches 10..29 run scoreboard players set @s var1 2
-execute if score @s var0 matches 30..39 run scoreboard players set @s var1 3
+execute if score @s var0 matches 30.. run scoreboard players set @s var1 3
 execute if score @s var0 matches 40.. run tag @s add cs_max
 
 scoreboard players set @s[tag=max] var0 40
