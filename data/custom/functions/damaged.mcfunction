@@ -4,7 +4,8 @@ execute store result score @s var2 run data get entity @s HurtTime
 
 execute unless entity @s[scores={var2=1..}] run effect give @s[type=#custom:living,scores={health_target=5..}] instant_damage 1
 execute unless entity @s[scores={var2=1..}] run effect give @s[type=#custom:undead,scores={health_target=5..}] instant_health 1
-scoreboard players remove @s[type=!end_crystal,type=!ender_dragon,scores={health_target=5..},nbt={HurtTime:0}] damaged 4
+execute unless entity @s[scores={var2=1..}] at @s[type=ender_dragon,scores={health_target=5..}] run summon creeper ~ ~ ~ {Fuse:0,ExplosionRadius:2}
+scoreboard players remove @s[type=!end_crystal,scores={health_target=5..},nbt={HurtTime:0}] damaged 4
 
 scoreboard players operation @s health_target -= @s damaged
 scoreboard players operation @s health_target -= @s damaged
