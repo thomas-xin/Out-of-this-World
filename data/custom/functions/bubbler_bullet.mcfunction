@@ -21,7 +21,7 @@ execute at @s[tag=level3,scores={var0=21..23}] run tp @s ^.71 ^.71 ^
 
 execute at @s[tag=!level3] positioned ^ ^ ^.1 positioned ~ ~.7 ~ run function custom:check_solid
 # execute at @s[tag=level4] positioned ^ ^ ^.1 positioned ~ ~1.7 ~ run function custom:break_blocks
-kill @s[tag=thru,tag=level4]
+kill @s[tag=thru,scores={var3=5..},tag=level4]
 execute at @s[tag=thru] run tp @s ~ ~.75 ~ ~ ~-8
 tag @s[tag=thru] remove thru
 
