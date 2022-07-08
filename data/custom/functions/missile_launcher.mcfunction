@@ -6,7 +6,7 @@ execute at @s[tag=level_1] anchored eyes run summon fireball ^ ^ ^.9 {ExplosionP
 
 execute at @s[tag=level_2] anchored eyes run summon fireball ^ ^ ^.9 {ExplosionPower:2,Tags:["level2","despawn","missile_launcher_bullet","assign"],Motion:[0.,0.,0.]}
 
-execute at @s[tag=level_3] anchored eyes run summon fireball ^ ^.8 ^1.3 {ExplosionPower:1,Tags:["level3","despawn","missile_launcher_bullet","assign"],Motion:[0.,0.,0.]}
+execute at @s[tag=level_3] anchored eyes run summon fireball ^ ^.8 ^1.3 {ExplosionPower:2,Tags:["level3","despawn","missile_launcher_bullet","assign"],Motion:[0.,0.,0.]}
 execute at @s[tag=level_3] anchored eyes run summon fireball ^.73 ^-.4 ^1.3 {ExplosionPower:1,Tags:["level3","despawn","missile_launcher_bullet","assign"],Motion:[0.,0.,0.]}
 execute at @s[tag=level_3] anchored eyes run summon fireball ^-.73 ^-.4 ^1.3 {ExplosionPower:1,Tags:["level3","despawn","missile_launcher_bullet","assign"],Motion:[0.,0.,0.]}
 
