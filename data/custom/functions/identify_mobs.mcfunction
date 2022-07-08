@@ -9,4 +9,4 @@ tag @s[type=player,tag=!killable] add instakill_immune
 tag @s[nbt={Invulnerable:1b}] remove killable
 tag @s[nbt={Invulnerable:1b}] remove basic
 
-tag @s add typed
+tag @s[nbt=!{Invulnerable:1b}] add typed
