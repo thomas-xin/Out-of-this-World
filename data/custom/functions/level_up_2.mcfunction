@@ -22,17 +22,17 @@ execute unless entity @s[tag=cs_max] run data modify block 0 -64 0 Items[0].tag.
 execute if entity @s[tag=cs_max] run data modify block 0 -64 0 Items[0].tag.Enchantments set value [{}]
 
 execute if score @s var1 matches 1 in overworld run data modify block 0 -64 0 Items[0].tag.display.Lore[0] set value '{"text":"Level 1","color":"white","italic":false}'
-execute if score @s var1 matches 2 run data modify block 0 -64 0 Items[0].tag.display.Lore[0] set value '{"text":"Level 2","color":"white","italic":false}'
+execute if score @s var1 matches 2 in overworld run data modify block 0 -64 0 Items[0].tag.display.Lore[0] set value '{"text":"Level 2","color":"white","italic":false}'
 execute if score @s var1 matches 3 in overworld run data modify block 0 -64 0 Items[0].tag.display.Lore[0] set value '{"text":"Level 3","color":"white","italic":false}'
 
-execute store result entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse int 1 in overworld run scoreboard players get @s var0
-data modify block 0 -64 0 Items[0].tag.xp set from entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse
+execute store result entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse int 1 run scoreboard players get @s var0
+execute in overworld run data modify block 0 -64 0 Items[0].tag.xp set from entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse
 
-execute store result entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse int 1 in overworld run scoreboard players get @s var1
-data modify block 0 -64 0 Items[0].tag.lv set from entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse
+execute store result entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse int 1 run scoreboard players get @s var1
+execute in overworld run data modify block 0 -64 0 Items[0].tag.lv set from entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse
 
-execute store result entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse int 1 in overworld run scoreboard players get @s var2
-data modify block 0 -64 0 Items[0].tag.Damage set from entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse
+execute store result entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse int 1 run scoreboard players get @s var2
+execute in overworld run data modify block 0 -64 0 Items[0].tag.Damage set from entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse
 
 kill f5b0b87c-9a1a-48ab-9adb-56b270201ccc
 
