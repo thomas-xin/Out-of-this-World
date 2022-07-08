@@ -6,9 +6,9 @@ execute at @s[tag=level_1] anchored eyes run summon fireball ^ ^ ^.9 {ExplosionP
 
 execute at @s[tag=level_2] anchored eyes run summon fireball ^ ^ ^.9 {ExplosionPower:2,Tags:["level2","despawn","missile_launcher_bullet","assign"],Motion:[0.,0.,0.]}
 
-execute at @s[tag=level_3] anchored eyes run summon fireball ^ ^.8 ^3.2 {ExplosionPower:2,Tags:["level3","despawn","missile_launcher_bullet","assign"],Motion:[0.,0.,0.]}
-execute at @s[tag=level_3] anchored eyes run summon fireball ^.73 ^-.4 ^3.2 {ExplosionPower:1,Tags:["level3","despawn","missile_launcher_bullet","assign"],Motion:[0.,0.,0.]}
-execute at @s[tag=level_3] anchored eyes run summon fireball ^-.73 ^-.4 ^3.2 {ExplosionPower:1,Tags:["level3","despawn","missile_launcher_bullet","assign"],Motion:[0.,0.,0.]}
+execute at @s[tag=level_3] anchored eyes run summon fireball ^ ^.8 ^3.6 {ExplosionPower:2,Tags:["level3","despawn","missile_launcher_bullet","assign"],Motion:[0.,0.,0.]}
+execute at @s[tag=level_3] anchored eyes run summon fireball ^.73 ^-.4 ^3.6 {ExplosionPower:1,Tags:["level3","despawn","missile_launcher_bullet","assign"],Motion:[0.,0.,0.]}
+execute at @s[tag=level_3] anchored eyes run summon fireball ^-.73 ^-.4 ^3.6 {ExplosionPower:1,Tags:["level3","despawn","missile_launcher_bullet","assign"],Motion:[0.,0.,0.]}
 
 execute as @e[tag=assign] run execute store result score @s var0 run data get entity f266414c-caac-11eb-b8bc-0242ac130003 Pos[0]
 execute as @e[tag=assign] run execute store result score @s var1 run data get entity f266414c-caac-11eb-b8bc-0242ac130003 Pos[1]
