@@ -8,7 +8,7 @@ execute at @e[tag=s2,limit=1] run tag @a[gamemode=!creative,gamemode=!spectator,
 execute at @e[tag=s2,limit=1] unless entity @e[tag=victim] run tag @e[tag=found,distance=24..,sort=nearest,limit=1] add victim
 execute at @e[tag=s2,limit=1] unless entity @e[tag=victim] run tag @e[tag=priority,distance=12..303,sort=nearest,limit=1] add victim
 
-execute at @e[tag=victim,sort=nearest,limit=1] run summon area_effect_cloud ~ ~ ~ {Duration:1,UUID:[I;-228179636,-894692885,-1195638206,-1408040957]}
+execute at @e[tag=victim,sort=nearest,limit=1] run summon area_effect_cloud ~ ~ ~ {Duration:2,UUID:[I;-228179636,-894692885,-1195638206,-1408040957]}
 tag @e[tag=victim] remove victim
 execute as @e[tag=s1,limit=1] at @s run summon area_effect_cloud ~ ~ ~ {Duration:150,Tags:["summontimer"]}
 execute as @e[tag=s2,limit=1] at @s run summon area_effect_cloud ~ ~ ~ {Duration:100,Tags:["summontimer"]}

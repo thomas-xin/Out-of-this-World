@@ -7,11 +7,11 @@ execute at @s[tag=level3] run summon area_effect_cloud ~ ~1.7 ~ {Radius:.1,Durat
 
 execute as @s[tag=!level3] run particle flame ~ ~1.7 ~ .5 .5 .5 .1 3 force
 execute as @s[tag=level3] run particle soul_fire_flame ~ ~1.7 ~ .5 .5 .5 .1 3 force
-execute as @s[scores={var3=16..}] run setblock ~ ~.7 ~ soul_fire keep
+execute as @s[scores={var3=24..}] run setblock ~ ~.7 ~ fire keep
 
 execute store result entity @s Motion[0] double 0.01 run scoreboard players get @s var0
 tag @s[tag=thru] remove thru
-execute positioned ~ ~.9 ~ run function custom:check_solid
+execute positioned ~ ~1.2 ~ run function custom:check_solid
 execute if entity @s[tag=thru] store result entity @s Motion[1] double 0.006 run scoreboard players get @s var1
 execute store result entity @s Motion[2] double 0.01 run scoreboard players get @s var2
 

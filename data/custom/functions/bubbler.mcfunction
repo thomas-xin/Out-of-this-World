@@ -1,7 +1,7 @@
-execute at @s[tag=level_3] run summon area_effect_cloud ~ ~ ~ {Duration:1,Tags:["bubbler_rando","r1"]}
-execute at @s[tag=level_3] run summon area_effect_cloud ~ ~ ~ {Duration:1,Tags:["bubbler_rando","r2"]}
-execute at @s[tag=level_3] run summon area_effect_cloud ~ ~ ~ {Duration:1,Tags:["bubbler_rando","r3"]}
-execute at @s[tag=level_3] run summon area_effect_cloud ~ ~ ~ {Duration:1,Tags:["bubbler_rando","r4"]}
+execute at @s[tag=level_3] run summon area_effect_cloud ~ ~ ~ {Duration:2,Tags:["bubbler_rando","r1"]}
+execute at @s[tag=level_3] run summon area_effect_cloud ~ ~ ~ {Duration:2,Tags:["bubbler_rando","r2"]}
+execute at @s[tag=level_3] run summon area_effect_cloud ~ ~ ~ {Duration:2,Tags:["bubbler_rando","r3"]}
+execute at @s[tag=level_3] run summon area_effect_cloud ~ ~ ~ {Duration:2,Tags:["bubbler_rando","r4"]}
 
 execute at @s[tag=level_1] anchored eyes run summon armor_stand ^ ^ ^ {Tags:["level1","bubbler_bullet","despawn","assign","player_assign"],NoGravity:1b,Invulnerable:1b,Small:1b,Invisible:1b,Pose:{Head:[45f,0f,45f]},ArmorItems:[{},{},{},{id:"minecraft:glass",Count:1b}]}
 
@@ -31,7 +31,6 @@ execute as @e[tag=assign,scores={var0=18}] at @s run tp @s ^-1.5 ^-3.62 ^
 playsound minecraft:block.bubble_column.bubble_pop player @a ~ ~ ~ 1 1.5
 playsound minecraft:block.dispenser.launch player @a ~ ~ ~ 0.5 2
 tag @e[tag=assign] remove assign
-kill @e[tag=cs_target]
 scoreboard players set @s[tag=level_1] cs_delay 7
 scoreboard players set @s[tag=level_2] cs_delay 4
 scoreboard players set @s[tag=level_3] cs_delay 6
