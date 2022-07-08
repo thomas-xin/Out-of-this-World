@@ -1,6 +1,6 @@
 execute store result score @s var2 run data get entity @s SelectedItem.tag.lv
-execute unless block 0 -64 0 dropper run setblock 0 -64 0 dropper[facing=down]
-item replace block 0 -64 0 container.0 from entity @s weapon.mainhand
+execute in overworld unless block 0 -64 0 dropper run setblock 0 -64 0 dropper[facing=down]
+execute in overworld run item replace block 0 -64 0 container.0 from entity @s weapon.mainhand
 
 tag @s remove cs_max
 summon area_effect_cloud ~ ~ ~ {Duration:2147483647,UUID:[I;-172967812,-1709553493,-1696901454,1881152716]}
@@ -21,20 +21,19 @@ execute if score @s var3 matches 0 run scoreboard players set @s var2 0
 execute unless entity @s[tag=cs_max] run data modify block 0 -64 0 Items[0].tag.Enchantments set value []
 execute if entity @s[tag=cs_max] run data modify block 0 -64 0 Items[0].tag.Enchantments set value [{}]
 
-execute if score @s var1 matches 1 run data modify block 0 -64 0 Items[0].tag.display.Lore[0] set value '{"text":"Level 1","color":"white","italic":false}'
+execute if score @s var1 matches 1 in overworld run data modify block 0 -64 0 Items[0].tag.display.Lore[0] set value '{"text":"Level 1","color":"white","italic":false}'
 execute if score @s var1 matches 2 run data modify block 0 -64 0 Items[0].tag.display.Lore[0] set value '{"text":"Level 2","color":"white","italic":false}'
-execute if score @s var1 matches 3 run data modify block 0 -64 0 Items[0].tag.display.Lore[0] set value '{"text":"Level 3","color":"white","italic":false}'
+execute if score @s var1 matches 3 in overworld run data modify block 0 -64 0 Items[0].tag.display.Lore[0] set value '{"text":"Level 3","color":"white","italic":false}'
 
-execute store result entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse int 1 run scoreboard players get @s var0
+execute store result entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse int 1 in overworld run scoreboard players get @s var0
 data modify block 0 -64 0 Items[0].tag.xp set from entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse
 
-execute store result entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse int 1 run scoreboard players get @s var1
+execute store result entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse int 1 in overworld run scoreboard players get @s var1
 data modify block 0 -64 0 Items[0].tag.lv set from entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse
 
-execute store result entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse int 1 run scoreboard players get @s var2
+execute store result entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse int 1 in overworld run scoreboard players get @s var2
 data modify block 0 -64 0 Items[0].tag.Damage set from entity f5b0b87c-9a1a-48ab-9adb-56b270201ccc DurationOnUse
 
 kill f5b0b87c-9a1a-48ab-9adb-56b270201ccc
 
-item replace entity @s weapon.mainhand from block 0 -64 0 container.0
-
+execute in overworld run item replace entity @s weapon.mainhand from block 0 -64 0 container.0
