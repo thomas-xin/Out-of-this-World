@@ -34,16 +34,16 @@ scoreboard players add @s[tag=level3] var0 1
 execute positioned ~ ~-.7 ~ run scoreboard players set @a[distance=..1.7] var1 1
 execute positioned ~ ~-.7 ~ as @a[distance=..1.7] run function custom:damage_players
 
-execute as @s[tag=level1] positioned ~ ~ ~ run scoreboard players add @e[tag=basic,distance=..1.5] damaged 1
-execute as @s[tag=level1] positioned ~ ~ ~ run scoreboard players add @e[type=#custom:large,distance=1.5..3] damaged 1
+execute at @s[tag=level1] positioned ~ ~ ~ run scoreboard players add @e[tag=basic,distance=..1.5] damaged 1
+execute at @s[tag=level1] positioned ~ ~ ~ run scoreboard players add @e[type=#custom:large,distance=1.5..3] damaged 1
 
-execute as @s[tag=level2] positioned ~ ~ ~ run scoreboard players add @e[tag=basic,distance=..2] damaged 2
-execute as @s[tag=level2] positioned ~ ~ ~ run scoreboard players add @e[type=#custom:large,distance=2..4] damaged 2
+execute at @s[tag=level2] positioned ~ ~ ~ run scoreboard players add @e[tag=basic,distance=..2] damaged 2
+execute at @s[tag=level2] positioned ~ ~ ~ run scoreboard players add @e[type=#custom:large,distance=2..4] damaged 2
 
-execute as @s[tag=level3] positioned ~ ~ ~ run scoreboard players add @e[tag=basic,distance=..2] damaged 3
-execute as @s[tag=level3] positioned ~ ~ ~ run scoreboard players add @e[type=#custom:large,distance=2..4] damaged 3
+execute at @s[tag=level3] positioned ~ ~ ~ run scoreboard players add @e[tag=basic,distance=..2] damaged 3
+execute at @s[tag=level3] positioned ~ ~ ~ run scoreboard players add @e[type=#custom:large,distance=2..4] damaged 3
 
-execute as @s[tag=level4] positioned ~ ~ ~ run scoreboard players add @e[tag=basic,distance=..2] damaged 3
-execute as @s[tag=level4] positioned ~ ~ ~ run scoreboard players add @e[type=#custom:large,distance=2..4] damaged 3
+execute at @s[tag=level4] positioned ~ ~ ~ run scoreboard players add @e[tag=basic,distance=..2] damaged 3
+execute at @s[tag=level4] positioned ~ ~ ~ run scoreboard players add @e[type=#custom:large,distance=2..4] damaged 3
 
 execute positioned ~ ~-.5 ~ if entity @e[tag=basic,distance=..1.5] run kill @s

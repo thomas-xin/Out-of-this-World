@@ -23,6 +23,6 @@ tag @s[tag=level1] add no_destroy
 execute at @s[tag=level3] run summon minecraft:area_effect_cloud ~ ~ ~ {Radius:.1,Duration:3,Color:255}
 execute at @s[tag=level3] run summon minecraft:area_effect_cloud ~ ~ ~ {Radius:.1,Duration:3,Color:16776960}
 
-execute positioned ~ ~-2 ~ run scoreboard players add @e[type=enderman,distance=..2.5] damaged 4
+execute at @s positioned ~ ~-2 ~ run scoreboard players add @e[type=enderman,distance=..2.5] damaged 4
 
-execute positioned ~ ~-.5 ~ run scoreboard players add @e[tag=basic,distance=..2] damaged 1
+execute at @s positioned ~ ~-.5 ~ run scoreboard players add @e[tag=basic,distance=..2] damaged 1
