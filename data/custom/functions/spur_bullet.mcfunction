@@ -70,15 +70,23 @@ execute at @s[tag=level2] positioned ~ ~-.3 ~ as @a[distance=.01..3.5] run funct
 execute at @s[tag=level3] positioned ~ ~-.3 ~ as @a[distance=.01..4.5] run function custom:damage_players
 
 execute at @s[tag=level1] positioned ~ ~-.5 ~ run scoreboard players add @e[tag=basic,distance=..2] damaged 9
+execute at @s[tag=level1] positioned ~ ~-.5 ~ run scoreboard players add @e[type=#custom:large,distance=2..4] damaged 9
 execute at @s[tag=level1] positioned ~ ~-.5 ~ run scoreboard players add @e[tag=basic,distance=..3] damaged 6
+execute at @s[tag=level1] positioned ~ ~-.5 ~ run scoreboard players add @e[type=#custom:large,distance=3..6] damaged 6
 
 execute at @s[tag=level2,scores={var3=..23}] positioned ~ ~-.5 ~ run scoreboard players add @e[tag=basic,distance=..2] damaged 16
 execute at @s[tag=level2,scores={var3=24..}] positioned ~ ~-.5 ~ run scoreboard players add @e[tag=basic,distance=..2.5] damaged 18
 execute at @s[tag=level2,scores={var3=24..}] positioned ~ ~-.5 ~ run scoreboard players add @e[tag=basic,distance=..3.75] damaged 12
+execute at @s[tag=level2,scores={var3=..23}] positioned ~ ~-.5 ~ run scoreboard players add @e[type=#custom:large,distance=2..4] damaged 16
+execute at @s[tag=level2,scores={var3=24..}] positioned ~ ~-.5 ~ run scoreboard players add @e[type=#custom:large,distance=2.5..5] damaged 18
+execute at @s[tag=level2,scores={var3=24..}] positioned ~ ~-.5 ~ run scoreboard players add @e[type=#custom:large,distance=3.75..7.5] damaged 12
 
 execute at @s[tag=level3,scores={var3=..35}] positioned ~ ~-.5 ~ run scoreboard players add @e[tag=basic,distance=..2] damaged 24
 execute at @s[tag=level3,scores={var3=36..}] positioned ~ ~-.5 ~ run scoreboard players add @e[tag=basic,distance=..3] damaged 27
 execute at @s[tag=level3,scores={var3=36..}] positioned ~ ~-.5 ~ run scoreboard players add @e[tag=basic,distance=..4.5] damaged 18
+execute at @s[tag=level3,scores={var3=..35}] positioned ~ ~-.5 ~ run scoreboard players add @e[type=#custom:large,distance=2..4] damaged 24
+execute at @s[tag=level3,scores={var3=36..}] positioned ~ ~-.5 ~ run scoreboard players add @e[type=#custom:large,distance=3..6] damaged 27
+execute at @s[tag=level3,scores={var3=36..}] positioned ~ ~-.5 ~ run scoreboard players add @e[type=#custom:large,distance=4.5..9] damaged 18
 
 tag @s[tag=!level3] add break_stone
 tag @s[tag=level3] add break_obsidian

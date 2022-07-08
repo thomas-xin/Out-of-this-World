@@ -27,4 +27,5 @@ scoreboard players set @a[distance=..3.5] var1 1
 execute as @a[distance=..3.5] run function custom:damage_players
 
 scoreboard players add @e[tag=basic,distance=..3.5] damaged 1
-scoreboard players add @e[tag=basic,distance=..2.5,sort=random,limit=3] damaged 2
+scoreboard players add @e[tag=basic,distance=..3,sort=random,limit=3] damaged 1
+scoreboard players add @e[tag=basic,distance=..2.5,sort=random,limit=2] damaged 1

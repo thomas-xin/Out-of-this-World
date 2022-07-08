@@ -5,7 +5,6 @@ execute at @s[tag=level2] run summon area_effect_cloud ~ ~.7 ~ {Radius:.06,Durat
 execute at @s[tag=level3] run summon area_effect_cloud ~ ~.7 ~ {Radius:.07,Duration:3,Color:16777215}
 execute at @s[tag=level1] run summon area_effect_cloud ~ ~.7 ~ {Radius:.05,Duration:3,Color:16777215}
 execute at @s[tag=level2] run summon area_effect_cloud ~ ~.7 ~ {Radius:.06,Duration:3,Color:8355839}
-execute at @s[tag=level3] run summon area_effect_cloud ~ ~.7 ~ {Radius:.07,Duration:3,Color:16777215}
 execute at @s[tag=level4] run summon area_effect_cloud ~ ~.7 ~ {Radius:.08,Duration:3,Color:16777215}
 
 scoreboard players set @s[tag=level3,scores={var0=24}] var0 0
@@ -36,11 +35,15 @@ execute positioned ~ ~-.7 ~ run scoreboard players set @a[distance=..1.7] var1 1
 execute positioned ~ ~-.7 ~ as @a[distance=..1.7] run function custom:damage_players
 
 execute as @s[tag=level1] positioned ~ ~ ~ run scoreboard players add @e[tag=basic,distance=..1.5] damaged 1
+execute as @s[tag=level1] positioned ~ ~ ~ run scoreboard players add @e[type=#custom:large,distance=1.5..3] damaged 1
 
 execute as @s[tag=level2] positioned ~ ~ ~ run scoreboard players add @e[tag=basic,distance=..2] damaged 2
+execute as @s[tag=level2] positioned ~ ~ ~ run scoreboard players add @e[type=#custom:large,distance=2..4] damaged 2
 
 execute as @s[tag=level3] positioned ~ ~ ~ run scoreboard players add @e[tag=basic,distance=..2] damaged 3
+execute as @s[tag=level3] positioned ~ ~ ~ run scoreboard players add @e[type=#custom:large,distance=2..4] damaged 3
 
 execute as @s[tag=level4] positioned ~ ~ ~ run scoreboard players add @e[tag=basic,distance=..2] damaged 3
+execute as @s[tag=level4] positioned ~ ~ ~ run scoreboard players add @e[type=#custom:large,distance=2..4] damaged 3
 
 execute positioned ~ ~-.5 ~ if entity @e[tag=basic,distance=..1.5] run kill @s
