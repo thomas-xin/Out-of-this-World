@@ -1,0 +1,10 @@
+{
+	"replace":false,
+	"values":[
+		"iron_golem",
+		"ghast",
+		"giant",
+		"warden",
+		"wither",
+	]
+}
