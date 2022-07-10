@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "minecraft:gilded_blackstone"
+    },
+    "result": "minecraft:gold_ingot",
+    "experience": 2,
+    "cookingtime": 200
+}

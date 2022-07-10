@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "minecraft:turtle_egg"
+    },
+    "result": "minecraft:scute",
+    "experience": 0.4,
+    "cookingtime": 200
+}
