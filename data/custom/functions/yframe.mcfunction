@@ -45,7 +45,7 @@ execute unless entity @e[tag=tornado,limit=1] as @e[tag=falling] unless entity @
 execute if entity @e[tag=tornado,limit=1] run function custom:tornado_effect
 execute in overworld positioned 0 0 0 unless entity @e[tag=wind,distance=...1] run summon armor_stand 0 0 0 {Invisible:1b,Invulnerable:1b,Tags:["wind"]}
 
-execute if entity @e[tag=wither_load] run function custom:wither_loop
+execute if entity @e[tag=wither_load,limit=1] run function custom:wither_loop
 
 execute as @a at @s run function custom:player_entity
 

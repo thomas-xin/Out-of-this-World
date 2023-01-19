@@ -32,8 +32,11 @@ execute as @e[tag=blast] at @s run function custom:blast
 execute as @e[tag=wither_target] at @s run function custom:wither_sprite
 
 execute as @e[tag=wither_main] store result score @s compare_id run data get entity @s Health
-execute if score __global_delay__ var0 matches 0 as @e[tag=wither_main] if score @s compare_id matches ..800 at @s positioned ~ ~8.1 ~ run function custom:wither_attack
-execute unless score __global_delay__ var0 matches 0 as @e[tag=wither_main] if score @s compare_id matches ..200 at @s positioned ~ ~8.1 ~ run function custom:wither_attack
+execute if score __slow_loop__ var0 matches 0 as @e[tag=wither_main] if score @s compare_id matches 501..900 at @s run function custom:wither_attack
+execute if score __slow_loop__ var0 matches 48 as @e[tag=wither_main] if score @s compare_id matches 501..900 at @s run function custom:wither_attack
+execute if score __global_delay__ var0 matches 0 as @e[tag=wither_main] if score @s compare_id matches ..500 at @s run function custom:wither_attack
+execute if score __global_delay__ var0 matches 12 as @e[tag=wither_main] if score @s compare_id matches ..300 at @s run function custom:wither_attack
+execute as @e[tag=wither_main] if score @s compare_id matches ..400 at @s unless block ~ ~-6 ~ air run tp ~ ~0.5 ~
 
 execute at @e[tag=attack] run summon area_effect_cloud ~ ~-8.1 ~ {Duration:400,Tags:["summontimer"]}
 execute at @e[tag=attack] run playsound minecraft:entity.evoker.prepare_summon neutral @a ~ ~ ~ 4. 0.6

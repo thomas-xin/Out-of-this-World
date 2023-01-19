@@ -1,5 +1,5 @@
 say Welcome to Out of this World!
-kill @e[tag=angle]
+execute positioned 0 -64 0 run kill @e[tag=angle]
 summon armor_stand 0 -64 0 {Invulnerable:1,Marker:1,NoGravity:1,Tags:["angle"]}
 
 scoreboard objectives add count dummy
@@ -13,6 +13,8 @@ scoreboard objectives add trident minecraft.used:minecraft.trident
 scoreboard objectives add cs_weapons minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add left minecraft.custom:minecraft.leave_game
 
+scoreboard objectives remove compare_id
+
 scoreboard objectives add player_id dummy
 scoreboard objectives add wither_id dummy
 scoreboard objectives add smudge_id dummy
@@ -24,6 +26,11 @@ scoreboard objectives add light_delay dummy
 scoreboard objectives add damage_taken minecraft.custom:minecraft.damage_taken
 scoreboard objectives add curr_xp xp
 scoreboard objectives add prev_xp dummy
+
+scoreboard objectives remove var0
+scoreboard objectives remove var1
+scoreboard objectives remove var2
+scoreboard objectives remove var3
 
 scoreboard objectives add var0 dummy
 scoreboard objectives add var1 dummy
