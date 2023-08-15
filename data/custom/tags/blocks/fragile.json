@@ -2,7 +2,7 @@
 	"replace":true,
 	"values":[
 		"minecraft:structure_void",
-		"#minecraft:replaceable_plants",
+		"#minecraft:replaceable_by_trees",
 		"#minecraft:small_flowers",
 		"#minecraft:bee_growables",
 		"#minecraft:wall_post_override",
